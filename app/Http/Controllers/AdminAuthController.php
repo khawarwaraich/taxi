@@ -21,7 +21,7 @@ class AdminAuthController extends Controller
         ]);
 
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password, 'role' => 'admin'])) {
-            return redirect('admin/home');
+            return view('dashboard');
         }else{
             return back();
         }

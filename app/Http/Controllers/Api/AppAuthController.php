@@ -32,7 +32,6 @@ class AppAuthController extends Controller
     {
         $credentials = [
             'email' => $request->email,
-            'role' => 'customer',
             'password' => $request->password
         ];
 

@@ -22,7 +22,7 @@ Route::post('auth', ['as' => 'login.auth', 'uses' => 'AdminAuthController@login_
 
 Route::group(['prefix' => 'admin','middleware' => ['auth'],'as' => 'admin:'], function () {
 
-  Route::get('/home', ['as' => 'home', 'uses' => 'HomeController@index']);
+  Route::get('/dashboard', ['as' => 'home', 'uses' => 'HomeController@index']);
   Route::any('logout', ['as' => 'logout', 'uses' => 'AdminAuthController@logout']);
 
   //Profile Routes (Admin)
