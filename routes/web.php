@@ -58,4 +58,4 @@ Route::group(['prefix' => 'admin','middleware' => ['auth'],'as' => 'admin:'], fu
 });
 
 ///Front Routes
-Route::get('/', ['uses' => 'HomeController@index']);
+Route::get('/', ['uses' => 'HomeController@front']);
