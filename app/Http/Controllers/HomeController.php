@@ -16,7 +16,7 @@ class HomeController extends Controller
 
     public function front()
     {
-        return view('front.home');
+        return view('home');
     }
 
 

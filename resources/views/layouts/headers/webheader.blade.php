@@ -1,4 +1,5 @@
- <div class="container">
+<div class="map-wapper-opacity">
+    <div class="container">
         <div class="row">
             <div class="row">
                 <div class="col-sm-4">
@@ -18,7 +19,7 @@
                     <div class="logo-wraper">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="{{ asset('front') }}/images/logo.png" alt="">
+                                <img src="images/logo.png" alt="">
                             </a>
                         </div>
                     </div>
@@ -111,3 +112,4 @@
             </div>
         </div>
     </div>
+</div>
