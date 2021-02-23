@@ -18,7 +18,7 @@
                     <div class="logo-wraper">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="{{ asset('public/front') }}/images/logo.png" alt="">
+                                <img src="{{ asset('front') }}/images/logo.png" alt="">
                             </a>
                         </div>
                     </div>

@@ -7,7 +7,7 @@
         <div class="main">
             <ul id="cbp-bislideshow" class="cbp-bislideshow">
                 <li>
-                    <div class="slider-img-wrap"><img src="{{ asset('public/front') }}/images/1.jpg" alt="image01"/></div>
+                    <div class="slider-img-wrap"><img src="{{ asset('front') }}/images/1.jpg" alt="image01"/></div>
                     <div class="slider-text-content">
                         <h1>ANYTIME,   <br/>ANYWHERE!</h1>
                         <div class="anytime-text">
@@ -19,21 +19,21 @@
                 </li>
 
                 <li>
-                    <div class="slider-img-wrap"><img src="{{ asset('public/front') }}/images/2.jpg" alt="image01"/></div>
+                    <div class="slider-img-wrap"><img src="{{ asset('front') }}/images/2.jpg" alt="image01"/></div>
                     <div class="slider-text-content">
                         <h1>book your taksi <br/>online now</h1>
                     </div>
                 </li>
 
                 <li>
-                    <div class="slider-img-wrap"><img src="{{ asset('public/front') }}/images/3.jpg" alt="image01"/></div>
+                    <div class="slider-img-wrap"><img src="{{ asset('front') }}/images/3.jpg" alt="image01"/></div>
                     <div class="slider-text-content">
                         <h1>a design that<br/>made with love</h1>
                     </div>
                 </li>
 
                 <li>
-                    <div class="slider-img-wrap"><img src="{{ asset('public/front') }}/images/4.jpg" alt="image01"/></div>
+                    <div class="slider-img-wrap"><img src="{{ asset('front') }}/images/4.jpg" alt="image01"/></div>
                     <div class="slider-text-content">
                         <h1>book your taksi<br/>online now</h1>
                     </div>
@@ -41,7 +41,7 @@
 
 
                 <li>
-                    <div class="slider-img-wrap"><img src="{{ asset('public/front') }}/images/5.jpg" alt="image01"/></div>
+                    <div class="slider-img-wrap"><img src="{{ asset('front') }}/images/5.jpg" alt="image01"/></div>
                     <div class="slider-text-content">
                         <h1>choose your<br/> first taksi</h1>
                         <div class="anytime-text">
@@ -53,7 +53,7 @@
                 </li>
 
                 <li>
-                    <div class="slider-img-wrap"><img src="{{ asset('public/front') }}/images/6.jpg" alt="image01"/></div>
+                    <div class="slider-img-wrap"><img src="{{ asset('front') }}/images/6.jpg" alt="image01"/></div>
                     <div class="slider-text-content">
                         <h1>a design that <br/>made with love</h1>
                     </div>
@@ -178,7 +178,7 @@
             <div class="row">
                 <div class="car-item-wrap">
                     <div class="car-type">
-                        <div class="car-wrap"><img class="private-car" src="{{ asset('public/front') }}/images/private-car.png" alt=""/></div>
+                        <div class="car-wrap"><img class="private-car" src="{{ asset('front') }}/images/private-car.png" alt=""/></div>
                         <h5>Private Car</h5>
                         <div class="car-type-btn">
                             <a href="Results_3.html" class="btn car-btn btn-lg">BOOK NOW</a>
@@ -186,7 +186,7 @@
                     </div>
 
                     <div class="car-type">
-                         <div class="car-wrap"><img class="morotbike-car" src="{{ asset('public/front') }}/images/motorbike.png" alt=""/></div>
+                         <div class="car-wrap"><img class="morotbike-car" src="{{ asset('front') }}/images/motorbike.png" alt=""/></div>
                         <h5>Motorbike</h5>
                         <div class="car-type-btn">
                             <a href="Results_3.html" class="btn car-btn btn-lg">BOOK NOW</a>
@@ -194,7 +194,7 @@
                     </div>
 
                     <div class="car-type">
-                        <div class="car-wrap"> <img class="minicar-car" src="{{ asset('public/front') }}/images/minicar.png" alt=""/></div>
+                        <div class="car-wrap"> <img class="minicar-car" src="{{ asset('front') }}/images/minicar.png" alt=""/></div>
                         <h5>Minicar</h5>
                         <div class="car-type-btn">
                             <a href="Results_3.html" class="btn car-btn btn-lg">BOOK NOW</a>
@@ -202,7 +202,7 @@
                     </div>
 
                     <div class="car-type">
-                        <div class="car-wrap"> <img class="mini-track-car" src="{{ asset('public/front') }}/images/mini-track.png" alt=""/></div>
+                        <div class="car-wrap"> <img class="mini-track-car" src="{{ asset('front') }}/images/mini-track.png" alt=""/></div>
                         <h5>Mini Truck</h5>
                         <div class="car-type-btn">
                             <a href="Results_3.html" class="btn car-btn btn-lg">BOOK NOW</a>
@@ -210,7 +210,7 @@
                     </div>
 
                     <div class="car-type">
-                        <div class="car-wrap"> <img class="boat-car" src="{{ asset('public/front') }}/images/boat.png" alt=""/></div>
+                        <div class="car-wrap"> <img class="boat-car" src="{{ asset('front') }}/images/boat.png" alt=""/></div>
                         <h5>Boat</h5>
                         <div class="car-type-btn">
                             <a href="Results_3.html" class="btn car-btn btn-lg">BOOK NOW</a>
@@ -218,7 +218,7 @@
                     </div>
 
                     <div class="car-type">
-                        <div class="car-wrap"> <img class="snow-car" src="{{ asset('public/front') }}/images/snow-bike.png" alt=""/></div>
+                        <div class="car-wrap"> <img class="snow-car" src="{{ asset('front') }}/images/snow-bike.png" alt=""/></div>
                         <h5>Snow Bike</h5>
                         <div class="car-type-btn">
                             <a href="Results_3.html" class="btn car-btn btn-lg">BOOK NOW</a>
@@ -226,7 +226,7 @@
                     </div>
 
                     <div class="car-type">
-                        <div class="car-wrap"> <img class="tractor-car" src="{{ asset('public/front') }}/images/tractor.png" alt=""/></div>
+                        <div class="car-wrap"> <img class="tractor-car" src="{{ asset('front') }}/images/tractor.png" alt=""/></div>
                         <h5>Tractor</h5>
                         <div class="car-type-btn">
                             <a href="Results_3.html" class="btn car-btn btn-lg">BOOK NOW</a>
@@ -234,7 +234,7 @@
                     </div>
 
                     <div class="car-type">
-                        <div class="car-wrap"> <img class="vihicel-car" src="{{ asset('public/front') }}/images/vihicel.png" alt=""/></div>
+                        <div class="car-wrap"> <img class="vihicel-car" src="{{ asset('front') }}/images/vihicel.png" alt=""/></div>
                         <h5>Large Vehicle</h5>
                         <div class="car-type-btn">
                             <a href="Results_3.html" class="btn car-btn btn-lg">BOOK NOW</a>
@@ -242,7 +242,7 @@
                     </div>
 
                     <div class="car-type">
-                        <div class="car-wrap"> <img class="morotbike-car" src="{{ asset('public/front') }}/images/motorbike.png" alt=""/></div>
+                        <div class="car-wrap"> <img class="morotbike-car" src="{{ asset('front') }}/images/motorbike.png" alt=""/></div>
                         <h5>Motorbike</h5>
                         <div class="car-type-btn">
                             <a href="Results_3.html" class="btn car-btn btn-lg">BOOK NOW</a>
@@ -250,7 +250,7 @@
                     </div>
 
                     <div class="car-type">
-                        <div class="car-wrap"> <img class="big-track-car" src="{{ asset('public/front') }}/images/big-track.png" alt=""/></div>
+                        <div class="car-wrap"> <img class="big-track-car" src="{{ asset('front') }}/images/big-track.png" alt=""/></div>
                         <h5>Big Truck</h5>
                         <div class="car-type-btn">
                             <a href="Results_3.html" class="btn car-btn btn-lg">BOOK NOW</a>
@@ -284,7 +284,7 @@
                                 <div class="col-sm-4">
                                     <div class="row">
                                         <div class="slider-item ">
-                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('public/front') }}/images/slider/slider1.jpg"/></div>
+                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('front') }}/images/slider/slider1.jpg"/></div>
                                             <div class="slider-text-hover">
                                                 <div class="slider-hover-content"></div>
                                                 <div class="Orange">
@@ -312,7 +312,7 @@
                                 <div class="col-sm-4">
                                     <div class="row">
                                         <div class="slider-item ">
-                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('public/front') }}/images/slider/slider2.jpg"/></div>
+                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('front') }}/images/slider/slider2.jpg"/></div>
 
                                             <div class="slider-text-hover">
                                                 <div class="slider-hover-content"></div>
@@ -345,7 +345,7 @@
                                 <div class="col-sm-4">
                                     <div class="row">
                                         <div class="slider-item homepage-sllider-m">
-                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('public/front') }}/images/slider/slider3.jpg"/></div>
+                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('front') }}/images/slider/slider3.jpg"/></div>
 
                                             <div class="slider-text-hover">
                                                 <div class="slider-hover-content"></div>
@@ -380,7 +380,7 @@
                                 <div class="col-sm-4">
                                     <div class="row">
                                         <div class="slider-item ">
-                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('public/front') }}/images/slider/slider4.jpg"/></div>
+                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('front') }}/images/slider/slider4.jpg"/></div>
                                             <div class="slider-text-hover">
                                                 <div class="slider-hover-content"></div>
                                                 <div class="Orange">
@@ -410,7 +410,7 @@
                                 <div class="col-sm-4">
                                     <div class="row">
                                         <div class="slider-item ">
-                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('public/front') }}/images/slider/slider5.jpg"/></div>
+                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('front') }}/images/slider/slider5.jpg"/></div>
                                             <div class="slider-text-hover">
                                                 <div class="slider-hover-content"></div>
                                                 <div class="Orange">
@@ -439,7 +439,7 @@
                                 <div class="col-sm-4">
                                     <div class="row">
                                         <div class="slider-item homepage-sllider-m">
-                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('public/front') }}/images/slider/slider6.jpg"/></div>
+                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('front') }}/images/slider/slider6.jpg"/></div>
 
                                             <div class="slider-text-hover">
                                                 <div class="slider-hover-content"></div>
@@ -474,7 +474,7 @@
                                 <div class="col-sm-4">
                                     <div class="row">
                                         <div class="slider-item ">
-                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('public/front') }}/images/slider/slider7.jpg"/></div>
+                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('front') }}/images/slider/slider7.jpg"/></div>
                                             <div class="slider-text-hover">
                                                 <div class="slider-hover-content"></div>
                                                 <div class="Orange">
@@ -504,7 +504,7 @@
                                 <div class="col-sm-4">
                                     <div class="row">
                                         <div class="slider-item ">
-                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('public/front') }}/images/slider/slider8.jpg"/></div>
+                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('front') }}/images/slider/slider8.jpg"/></div>
 
                                             <div class="slider-text-hover">
                                                 <div class="slider-hover-content"></div>
@@ -537,7 +537,7 @@
                                 <div class="col-sm-4">
                                     <div class="row">
                                         <div class="slider-item homepage-sllider-m">
-                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('public/front') }}/images/slider/slider9.jpg"/></div>
+                                            <div class="slider-img"><img class="img-responsive" alt="First slide" src="{{ asset('front') }}/images/slider/slider9.jpg"/></div>
                                             <div class="slider-text-hover">
                                                 <div class="slider-hover-content"></div>
                                                 <div class="Orange">
@@ -580,7 +580,7 @@
                     <div class="row">
                         <div class="label-item">
                             <div class="containt-font">
-                                <a href="#" class="img-circle"><img src="{{ asset('public/front') }}/images/lock.png" alt=""/></a>
+                                <a href="#" class="img-circle"><img src="{{ asset('front') }}/images/lock.png" alt=""/></a>
                             </div>
                             <div class="containt-text">
                                 <h3>Secure Booking</h3>
