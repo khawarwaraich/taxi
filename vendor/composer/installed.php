@@ -1,16 +1,34 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '6478126e02a52e37e151372bec59fa475da4336f',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
   array (
+    'alexpechkarev/geometry-library' => 
+    array (
+      'pretty_version' => '1.0.2',
+      'version' => '1.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '85a0859e87343e871020f0bc7530309d75ab4a3c',
+    ),
+    'alexpechkarev/google-maps' => 
+    array (
+      'pretty_version' => '7.1',
+      'version' => '7.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '61865e5d73ce64023a43cbb3cc16a368dedfca8f',
+    ),
     'asm89/stack-cors' => 
     array (
       'pretty_version' => '1.3.0',
@@ -471,6 +489,15 @@
       ),
       'reference' => 'abbf18d5ab8367f96b3205ca3c89fb2fa598c69e',
     ),
+    'jbroadway/urlify' => 
+    array (
+      'pretty_version' => '1.2.2-stable',
+      'version' => '1.2.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '9b227e8548f16268cef55b5eb5d659a801fa824b',
+    ),
     'jean85/pretty-package-versions' => 
     array (
       'pretty_version' => '2.0.2',
@@ -507,12 +534,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '6478126e02a52e37e151372bec59fa475da4336f',
     ),
     'laravel/passport' => 
     array (
@@ -1551,6 +1578,15 @@
       array (
       ),
       'reference' => '80953678b19901e5165c56752d087fc11526017c',
+    ),
+    'voku/stop-words' => 
+    array (
+      'pretty_version' => '2.0.1',
+      'version' => '2.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8e63c0af20f800b1600783764e0ce19e53969f71',
     ),
     'webmozart/assert' => 
     array (

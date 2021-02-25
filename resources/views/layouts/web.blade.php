@@ -23,7 +23,7 @@
 		<link href="{{ asset('front') }}/fonts/css/font-awesome.min.css" rel="stylesheet">
 
 
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key="></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyAKwIV-6y31LwzBieBhJqAztrZL9C76T7Y"></script>
 
     </head>
     <body>
@@ -54,5 +54,6 @@
             <script src="{{ asset('front') }}/js/custom.js" type="text/javascript"></script>
             <script src="{{ asset('front') }}/js/custom2.js" type="text/javascript"></script>
             <script src="{{ asset('front') }}/js/menu/custom-menu.js"></script>
+            <script src="{{ asset('front') }}/scripts/google-scripts.js"></script>
     </body>
 </html>

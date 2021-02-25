@@ -6,55 +6,9 @@
         <div class="main">
             <ul id="cbp-bislideshow" class="cbp-bislideshow">
                 <li>
-                    <div class="slider-img-wrap"><img src="{{ asset('front') }}/images/1.jpg" alt="image01"/></div>
+                    <div class="slider-img-wrap"><img src="https://miro.medium.com/max/3200/1*w2DBNHNdBQmSv9cisV95Tg.jpeg"/></div>
                     <div class="slider-text-content">
-                        <h1>ANYTIME,   <br/>ANYWHERE!</h1>
-                        <div class="anytime-text">
-                            <p><i class="fa fa-custom fa-circle-o"></i>Proin gravida nibh vel velit auctor aliquet sollicitudin.</p>
-                            <p><i class="fa fa-custom fa-circle-o"></i>Qnec sagittis bibendum auctor sem nibh id.</p>
-                            <p><i class="fa fa-custom fa-circle-o"></i>Rit amet nibh vulputate cursus nisi elit.</p>
-                        </div>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="slider-img-wrap"><img src="{{ asset('front') }}/images/2.jpg" alt="image01"/></div>
-                    <div class="slider-text-content">
-                        <h1>book your taksi <br/>online now</h1>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="slider-img-wrap"><img src="{{ asset('front') }}/images/3.jpg" alt="image01"/></div>
-                    <div class="slider-text-content">
-                        <h1>a design that<br/>made with love</h1>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="slider-img-wrap"><img src="{{ asset('front') }}/images/4.jpg" alt="image01"/></div>
-                    <div class="slider-text-content">
-                        <h1>book your taksi<br/>online now</h1>
-                    </div>
-                </li>
-
-
-                <li>
-                    <div class="slider-img-wrap"><img src="{{ asset('front') }}/images/5.jpg" alt="image01"/></div>
-                    <div class="slider-text-content">
-                        <h1>choose your<br/> first taksi</h1>
-                        <div class="anytime-text">
-                            <p><i class="fa fa-custom fa-circle-o"></i>Proin gravida nibh vel velit auctor aliquet sollicitudin.</p>
-                            <p><i class="fa fa-custom fa-circle-o"></i>Qnec sagittis bibendum auctor sem nibh id.</p>
-                            <p><i class="fa fa-custom fa-circle-o"></i>Rit amet nibh vulputate cursus nisi elit.</p>
-                        </div>
-                    </div>
-                </li>
-
-                <li>
-                    <div class="slider-img-wrap"><img src="{{ asset('front') }}/images/6.jpg" alt="image01"/></div>
-                    <div class="slider-text-content">
-                        <h1>a design that <br/>made with love</h1>
+                        <h1>Local taxis at the tap of a button</h1>
                     </div>
                 </li>
             </ul>
@@ -73,94 +27,27 @@
                         <div class="form-headr"></div>
                         <h2>Fill in the Details Below to Book Your Transfer.</h2>
                         <div class="form-select">
-                            <form>
-                                <div class="col-sm-12 custom-select-box tec-domain-cat1">
-                                    <div class="row">
-                                        <select class="selectpicker" data-live-search="false" >
-                                            <option>city</option>
-                                            <option>khulna</option>
-                                            <option>dhaka</option>
-                                         </select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 custom-select-box tec-domain-cat2">
-                                    <div class="row">
-                                        <select class="selectpicker" data-live-search="false"  >
-                                            <option>transfer type</option>
-                                            <option>transfer type 1</option>
-                                            <option>transfer type 2</option>
-                                         </select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 custom-select-box tec-domain-cat3">
-                                    <div class="row">
-                                        <div id="panel">
-                                        <select id="start" onchange="calcRoute();" class="selectpicker custom-select-box tec-domain-cat">
-                                          <option value="">puck-up location</option>
-                                          <option value="chicago, il">Chicago</option>
-                                          <option value="st louis, mo">St Louis</option>
-                                          <option value="joplin, mo">Joplin, MO</option>
-                                          <option value="oklahoma city, ok">Oklahoma City</option>
-                                          <option value="amarillo, tx">Amarillo</option>
-                                          <option value="gallup, nm">Gallup, NM</option>
-                                          <option value="flagstaff, az">Flagstaff, AZ</option>
-                                          <option value="winona, az">Winona</option>
-                                          <option value="kingman, az">Kingman</option>
-                                          <option value="barstow, ca">Barstow</option>
-                                          <option value="san bernardino, ca">San Bernardino</option>
-                                          <option value="los angeles, ca">Los Angeles</option>
-                                          <option value="khulna">Khulna, Bangladesh</option>
-                                          <option value="terokhada">Terokhada, Bangladesh</option>
-                                        </select>
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 custom-select-box tec-domain-cat4">
-                                    <div class="row">
-                                        <div>
-                                            <select id="end" onchange="calcRoute();"  class="selectpicker custom-select-box tec-domain-cat">
-                                                <option value="">drop-off location</option>
-                                              <option value="chicago, il">Chicago</option>
-                                              <option value="st louis, mo">St Louis</option>
-                                              <option value="joplin, mo">Joplin, MO</option>
-                                              <option value="oklahoma city, ok">Oklahoma City</option>
-                                              <option value="amarillo, tx">Amarillo</option>
-                                              <option value="gallup, nm">Gallup, NM</option>
-                                              <option value="flagstaff, az">Flagstaff, AZ</option>
-                                              <option value="winona, az">Winona</option>
-                                              <option value="kingman, az">Kingman</option>
-                                              <option value="barstow, ca">Barstow</option>
-                                              <option value="san bernardino, ca">San Bernardino</option>
-                                              <option value="los angeles, ca">Los Angeles</option>
-                                              <option value="Satkhira">Satkhira, Bangladesh</option>
-                                              <option value="terokhada">Terokhada, Bangladesh</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
+                            <form action="{{ route('request-drive') }}" method="post" enctype="multipart/form-data">
+                                @csrf
                                 <div class="col-sm-12">
                                     <div class="row">
-                                        <div class="col-sm-8 custom-select-box tec-domain-cat5 day">
+                                        <div class="col-sm-12 custom-select-box tec-domain-cat5">
                                             <div class="row" >
-                                                <input class="form-control custom-select-box tec-domain-cat5" type="date" name="date"  />
+                                                <input class="form-control custom-select-box tec-domain-cat5" id="location" type="text" placeholder="From Location" name="from_location" autocomplete/>
                                             </div>
                                         </div>
-
-                                        <div class="col-sm-4 custom-select-box tec-domain-cat6 time">
-                                            <div class="row">
-                                                <select class="selectpicker" data-live-search="false" >
-                                                    <option class="time1"> 08:00</option>
-                                                    <option class="time1"> 09:00</option>
-                                                    <option class="time1"> 10:00</option>
-                                                 </select>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 custom-select-box tec-domain-cat8">
+                                            <div class="row" >
+                                                <input class="form-control custom-select-box tec-domain-cat8" id="location2" type="text" placeholder="To Location" name="to_location" autocomplete/>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-button">
-                                    <button type="submit" class="btn form-btn btn-lg btn-block">Book Your Taxi Now</button>
+                                    <button type="submit" class="btn form-btn btn-lg btn-block">Request Drive</button>
                                 </div>
                             </form>
                         </div>

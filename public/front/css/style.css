@@ -8,9 +8,9 @@ author: themeskanon
 --------------------------------------------------------------
  Map content section
  Language & resister-social
- Header form 
- Home page 
- page no 3 page no 3 css 
+ Header form
+ Home page
+ page no 3 page no 3 css
  page no 6
  page no 9
  page no 10
@@ -24,7 +24,7 @@ author: themeskanon
  page no 30
  footer css content
  Preloader
-  
+
 */
 
 
@@ -52,11 +52,11 @@ text-decoration:none;
 body::-webkit-scrollbar {
     width:6px;
 }
- 
+
 body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
- 
+
 body::-webkit-scrollbar-thumb {
   background-color: #F1C40F;
   outline: 1px solid slategrey;
@@ -72,7 +72,7 @@ font-family: 'SourceSansPro Light',serif;
 
 h1{
 font-size:60px;
-font-family: 'Track';	
+font-family: 'Track';
 }
 h2{
 font-size: 38px;
@@ -98,7 +98,7 @@ font-size: 32px;
 /*-------------------------------------
 	MAP content css start
 -------------------------------------*/
-   
+
 
 #directions-panel {
 height: 60%;
@@ -109,7 +109,7 @@ overflow: auto;
 display: block;
 position: absolute;
 z-index: 10;
- 
+
 margin-left: 75%;
 }
 .adp-step, .adp-substep{
@@ -174,9 +174,9 @@ background-color: #fff;
 padding: 5px;
 border: 1px solid #999; */
 }
-   
-   
- 
+
+
+
 /* #map-holder {
 
 }
@@ -206,7 +206,7 @@ border: 1px solid #999; */
         padding: 0px
       }
       #panel {
-        position: absolute; 
+        position: absolute;
 		width:100%;
         z-index: 5;
       }
@@ -241,7 +241,7 @@ float: left;
 margin-left: 48%;
 margin-top: 247px;
 width: 34%;
- 
+
 height:300px;
 background: #ffffff;
 opacity: .9;
@@ -313,7 +313,7 @@ background: url('../images/select-bg-arro2.png') no-repeat transparent 62% 52% !
 .resister-social .language-opt{
 float:left;
 width:91px;
- 
+
 }
 .resister-social .login-register{
 float:left;
@@ -322,8 +322,8 @@ padding: 10px 0;
 font-size:14px;
 margin-right: 20px;
 }
-.resister-social .login-register a{ 
-padding-right:5px; 
+.resister-social .login-register a{
+padding-right:5px;
 }
 .resister-social .login-register a:last-child{
 border:none;
@@ -345,7 +345,7 @@ height: 23px;
 margin-right: 5px;
 font-size: 15px;
 line-height: 23px;
-text-align: center; 
+text-align: center;
 }
 .social-icon a:hover{
 background:#F1C40F;
@@ -359,13 +359,13 @@ width:100%;
  margin-top: 7px;
  font-size:30px;
  float:left;
- 
+
 }
 
 .dropdown-menu ul{float:left !important;list-style:none;padding: 10px 20px; }
 .dropdown-menu ul li{   width:100%; height: 30px;}
-.dropdown-menu ul li a{ font-size:14px;font-family:Trebuchet MS;padding: 5px 10px;} 
-.bootstrap-select .dropdown-menu ul li a{ font-size:16px;font-family:Trebuchet MS;} 
+.dropdown-menu ul li a{ font-size:14px;font-family:Trebuchet MS;padding: 5px 10px;}
+.bootstrap-select .dropdown-menu ul li a{ font-size:16px;font-family:Trebuchet MS;}
 .dropdown-menu{width:210px !important;margin-left:-60px;}
 .custom-dropdown-nav{
 width: 330px !important;
@@ -374,14 +374,13 @@ background: url(../images/form-headr-bg.jpg) bottom center repeat-x #ffffff;
 padding-bottom:20px;
 }
 
-/******************MAP**************/ 
+/******************MAP**************/
 /* *************** Header form css start ****************** */
 .form-wrap{
 width:93%;
-float:left; 
+float:left;
 position:absolute;
-height: 436px;
- 
+
 }
 .form-wrap h2{
 font-family:SourceSansPro Light;
@@ -407,7 +406,7 @@ border:1px solid #CCCCCC;
 margin-top:8px;
 font-family:Trebuchet MS;
 background:url(../images/down-array.png) no-repeat 96% #ffffff;
-outline: 0px; 
+outline: 0px;
 font-size: 16px;
 appearence: none;
 -webkit-appearance: none;
@@ -426,14 +425,14 @@ border:1px solid #CCCCCC;
 margin-top:8px;
 font-family:Trebuchet MS;
 background:url(../images/picup.png) no-repeat 96% #ffffff;
-outline: 0px; 
+outline: 0px;
 font-size: 16px;
 appearence: none;
 -webkit-appearance: none;
 -mox-appearance: none;
 }
 .cbp-bislideshow .slider-text-content h1{font-size:52px;}
- 
+
 .control-form2{
 height:37px;
 width:162px;
@@ -442,8 +441,8 @@ margin-top:8px;
 float:left;
 font-family:Trebuchet MS;
 background:url(../images/date.png) no-repeat 96% #ffffff;
-outline: 0px; 
-font-size: 16px; 
+outline: 0px;
+font-size: 16px;
 appearence: none;
 -webkit-appearance: none;
 -mox-appearance: none;
@@ -456,7 +455,7 @@ margin-top:8px;
 float:right;
 font-family:Trebuchet MS;
 background:url(../images/down-array.png) no-repeat 96% #ffffff;
-outline: 0px; 
+outline: 0px;
 font-size: 16px;
 appearence: none;
 -webkit-appearance: none;
@@ -467,16 +466,16 @@ width:100%;
 margin-top:16px;
 float:left;
 }
-.form-btn{  
+.form-btn{
 font-family:Trebuchet MS;
 margin-bottom:25px;
 width:100%;
 float:right;
 }
-.page30-form-wrapper .Transfer .form-horizontal .form-group .completing-form-btnwrap .form-btn{  
+.page30-form-wrapper .Transfer .form-horizontal .form-group .completing-form-btnwrap .form-btn{
 font-family:Trebuchet MS;
 margin-bottom:13px;
-width:220px; 
+width:220px;
 float:left;
 height:52px;
 margin-left:-10px;
@@ -484,14 +483,14 @@ margin-left:-10px;
 
 .anytime-wrap{
 width:100%;
-float:left; 
- 
+float:left;
+
 /* margin-top:61px; */
- 
+
 }
 .form-wrap-margin{/* margin-top:110px; */}
 .anytime-wrap h1{
-/* padding:0px 38px; 
+/* padding:0px 38px;
 margin-top:40px; */
 line-height:68px;
 padding-left: 38px;
@@ -541,10 +540,10 @@ float:left;
 .containt-font{
 height:62px;
 width:62px;
-float:left; 
+float:left;
 margin-top:24px;
 }
- 
+
 .containt-font img{
 margin:0px;
 padding:0px;
@@ -553,9 +552,9 @@ padding:0px;
 float: left;
 width: 82%;
 margin-left: 20px;
- 
+
 }
-.label-white{ 
+.label-white{
 width:100%;
 float:left;
 margin-bottom:95px;
@@ -570,7 +569,7 @@ background:url(../images/map-bg.png) no-repeat 65%;
 width:100%;
 float:left;
 padding-bottom:84px;
-padding-top:52px; 
+padding-top:52px;
 background-repeat:repeat;
 background-attachment: fixed;
 display: table;
@@ -607,7 +606,7 @@ border:1px solid red;
 width:100%;
 margin-top:35px;
 float:left;
- 
+
 }
 .label-item-m{margin-left:10px;}
 .label-item2{width:460px;margin-top:42px;}
@@ -618,7 +617,7 @@ text-align:center;
 }
 
 .destination h4{
-margin-top:-6px; 
+margin-top:-6px;
 padding-bottom:45px;
 }
 
@@ -627,7 +626,7 @@ padding-bottom:45px;
 background:#2C3E50;
 width:96%;
 float:left;
-height:420px; 
+height:420px;
 }
 .car-btn:hover{
 
@@ -642,11 +641,11 @@ height: 408px;
 padding-top: 5px;
 position: absolute;
 }
-.slider-item:hover .slider-text{ 
+.slider-item:hover .slider-text{
 display:none;
 }
-.slider-text{ 
-width: 100%; 
+.slider-text{
+width: 100%;
 z-index:1000;
 position: relative;
 display:block;
@@ -664,18 +663,18 @@ z-index: 1000;
 position: relative;
 display: none;
 float: left;
-margin: 5px; 
-height: 97.3%; 
+margin: 5px;
+height: 97.3%;
 }
 .slider-hover-content{
 width: 100%;
 z-index: 1000;
 position: absolute;
 
-float: left; 
+float: left;
 height:100%;
 opacity:.5;
-background:#2C3E50; 
+background:#2C3E50;
 }
 .Orange{
 height:150px;
@@ -683,10 +682,10 @@ width:100%;
 margin-top:50%;
 position:relative;
 color: #fff;
-z-index: 1000; 
+z-index: 1000;
 }
- 
-.slider-hover-content2{ 
+
+.slider-hover-content2{
 display:block;
 }
 .slider-hover-content2 h4{
@@ -709,7 +708,7 @@ width:160px;
 float:left;
 margin-left:5px;
 }
-.slider-text1 h4{ 
+.slider-text1 h4{
 
 margin: 0px;
 text-align: left;
@@ -717,12 +716,12 @@ text-align: left;
 margin-top: 25px;
 padding-left: 5px;
 }
-.slider-text1 p{ 
+.slider-text1 p{
 font-size:14px;
 text-align:left;
 font-family:SourceSansPro Light;
 font-style:italic;
-padding-left: 5px; 
+padding-left: 5px;
 }
 .slider-text2{
 width:110px;
@@ -765,23 +764,23 @@ width:100%;
 margin-top:196px;
 height:30px;
 float:left;
-position:absolute; 
+position:absolute;
 }
 .m-l-15{margin-left:-15px;}
 .car-item-wrap{
 width:100%;
 float:left;
-} 
-.label-white2{ 
+}
+.label-white2{
 width:100%;
 float:left;
 padding-bottom:52px;
 padding-top:69px;
-} 
+}
 .car-type{
 width:188px;
 float:left;
-height:210px; 
+height:210px;
 text-align:center;
 margin-top:9px;
 transition: all 150ms ease-in;
@@ -830,7 +829,7 @@ margin-top:9px;
 
 .car-type h5{
 text-align:center;
-font-size:24px; 
+font-size:24px;
 font-family:SourceSansPro Light;
 font-style:none;
 margin:0px;
@@ -849,19 +848,19 @@ margin-bottom:25px;
 .car-type-btn{
 width: 120px;
 margin: 0px auto;
-height:36px; 
+height:36px;
 z-index: 1000;
 padding-bottom:23px;
-position: relative; 
+position: relative;
 }
 .car-type-btn:hover{
 width: 120px;
 margin: 0px auto;
-height:36px; 
+height:36px;
 z-index: 1000;
-position: relative; 
+position: relative;
 }
-.car-btn{ 
+.car-btn{
 text-align:center;
 width:100%;
 height:36px;
@@ -875,23 +874,23 @@ font-family:SourceSansPro Light;
 .car-item-wrap2{
 margin-top:20px;
 }
-.social-item2{ 
+.social-item2{
 margin-top:50px !important;
-margin:0px auto; 
+margin:0px auto;
 }
 .containt-font a{
 float: left;
 width: 62px;
-height: 62px;  
+height: 62px;
 line-height: 53px;
-text-align: center; 
+text-align: center;
 transition: all 150ms ease-in;
 -webkit-transition: all 150ms ease-in;
 -o-transition: all 150ms ease-in;
 -moz-transition: all 150ms ease-in;
 }
 
- 
+
 .custom-select-box .bootstrap-select{
 width:100%;
 }
@@ -901,9 +900,9 @@ background-color:#ffffff; background-image:none; border:none; box-shadow:none; h
 .custom-select-box .bootstrap-select button.dropdown-toggle .filter-option {text-shadow:none; color:#2C3E50; font-size:16px; line-height:1.728571;line-height:22px !important;}
 .custom-select-box2 .bootstrap-select button.dropdown-toggle{
 background-color:#ffffff; background-image:none; border:none; box-shadow:none; height:37px;}
- .custom-select-box2 .bootstrap-select button.dropdown-toggle .filter-option {text-shadow:none; width:75px;color:#2C3E50; font-size:14px; margin-top: 3px; } 
- .custom-select-box3 .bootstrap-select button.dropdown-toggle .filter-option {color:#ffffff !important; } 
- .dropdown-icon5 .bootstrap-select button.dropdown-toggle .filter-option {text-shadow:none; width:100px;  font-size:14px;  } 
+ .custom-select-box2 .bootstrap-select button.dropdown-toggle .filter-option {text-shadow:none; width:75px;color:#2C3E50; font-size:14px; margin-top: 3px; }
+ .custom-select-box3 .bootstrap-select button.dropdown-toggle .filter-option {color:#ffffff !important; }
+ .dropdown-icon5 .bootstrap-select button.dropdown-toggle .filter-option {text-shadow:none; width:100px;  font-size:14px;  }
  .custom-select-box3{color:#ffffff;}
 .custom_btn_top{height:40px;}
 .custom-select-box .bootstrap-select.btn-group .btn .caret{height:35px; top:2px;  width:35px; margin-right: -12px; border-radius:3px; border:0px; float:right; margin-top:-6px;  -moz-margin-start: -35%;}
@@ -912,9 +911,10 @@ background-color:#ffffff; background-image:none; border:none; box-shadow:none; h
 .tec-domain-cat2 .bootstrap-select.btn-group .btn .caret{background:#ffffff url(../images/dropdown-icon.png) no-repeat;}
 .tec-domain-cat3 .bootstrap-select.btn-group .btn .caret{background:#ffffff url(../images/dropdown-icon2.png) no-repeat;}
 .tec-domain-cat4 .bootstrap-select.btn-group .btn .caret{background:#ffffff url(../images/dropdown-icon2.png) no-repeat;}
-.tec-domain-cat5 .bootstrap-select.btn-group .btn .caret{background:#ffffff url(../images/dropdown-icon3.png) no-repeat !important;}
+.tec-domain-cat5 .bootstrap-select.btn-group .btn .caret{background:#ffffff url(../images/dropdown-icon2.png) no-repeat !important;}
 
-.tec-domain-cat5  {background:#ffffff url(../images/dropdown-icon3.png) no-repeat 100% !important;border-radius: 4px;color: #2C3E50;}
+.tec-domain-cat5  {background:#ffffff url(../images/dropdown-icon2.png) no-repeat 100% !important;border-radius: 4px;color: #2C3E50;}
+.tec-domain-cat8  {background:#ffffff url(../images/reliable.png) no-repeat 99% !important;border-radius: 4px;color: #2C3E50;}
 .tec-domain-cat5::-webkit-calendar-picker-indicator{display: block;float: left;width: 0.66em;height: 0.66em;padding: 0.17em 0.34em;opacity: 0;-webkit-user-modify: read-only;}
 .tec-domain-cat5::-webkit-inner-spin-button{display:none;}
 .tec-domain-cat5::-webkit-clear-button {display:none;}
@@ -939,9 +939,9 @@ width: 24px !important;}
 margin-top: -1px;
 width: 24px !important;}
 .custom-select-box2 .bootstrap-select button.dropdown-toggle{background-color: transparent;width:80px;}
- 
+
 .form-select .dropdown-menu {
- 
+
 padding-top: 0px;
 border: none;
 margin-left: 0px !important;
@@ -955,7 +955,7 @@ width: 162px;
 }
 .google-image iframe{width:100%;height:700px;}
 .directions-card {display:none !important;}
-.gm-style .directions-address{color:red !important;} 
+.gm-style .directions-address{color:red !important;}
 
 .gm-style .directions-card-medium-large {
 height: 71px;
@@ -983,7 +983,7 @@ margin-top:37px;
 /*=================== page no 6 css start ======================== */
 
 .top-slider-wrap{
- 
+
 width:100%;
 float:left;
 border-top: 6px solid #f1c40f;
@@ -999,7 +999,7 @@ margin-top: 48px;
 margin-left: 46px;
 }
 .TRACK-YOUR-TAXI h2{
-font-family: Track; 
+font-family: Track;
 }
 .TRACK-YOUR-TAXI p{
 font-size:18px;
@@ -1009,19 +1009,19 @@ line-height:18px;
 /*=================== page no 6 css exit ======================== */
 /*=================== page no 9 css start ======================== */
 
-.page9-yellow-wrapper{} 
+.page9-yellow-wrapper{}
 
 /*=================== page no 9 css start ======================== */
 /*=================== page no 10 css start ======================== */
 .yellow-label-wrapper{
-float:left; 
+float:left;
 width: 100%;
 }
-.label-yellow2{ 
+.label-yellow2{
  padding-bottom:48px;
-padding-top:59px; 
+padding-top:59px;
 width:100%;
-float:left; 
+float:left;
 background:url(../images/cow.jpg) repeat-y;
 background-repeat:repeat;
 background-attachment: fixed;
@@ -1071,7 +1071,7 @@ margin-top:-4px;
 float:left;
 width:100%;
 }
-.page13-wrap{ 
+.page13-wrap{
 width:100%;
 float:left;
 padding-top:55px;
@@ -1121,7 +1121,7 @@ margin:0px auto;
 margin-top:35px;
 }
 .inactive-wrap2{
-width:86%; 
+width:86%;
 margin:0px auto;
 }
 .inactive{
@@ -1129,7 +1129,7 @@ width:90px;
 height:60px;
 background:#FFFFFF;
 float:left;
-border-radius:4px; 
+border-radius:4px;
 }
 .inactive2{
 width:120px;
@@ -1162,7 +1162,7 @@ cursor: default;
 float:left;
 width:100%;
 }
-.page19-wrap{ 
+.page19-wrap{
 width:100%;
 float:left;
 padding-top:46px;
@@ -1212,37 +1212,37 @@ margin-bottom:44px;
 }
 .featured-drivers-wrapper{
 width: 100%;
-float: left; 
+float: left;
 margin-top:12px;
 margin-bottom:75px;
 }
 .featured-drivers{
 width: 60px;
-float: left; 
+float: left;
 }
 .featured-drivers2{
 width: 140px;
 float: left;
-margin-right:20px; 
+margin-right:20px;
 }
-.featured2{ 
+.featured2{
 width: 60px;
 height: 140px;
 background: transparent;
 border-radius: 4px;
 }
-.featured22{ 
+.featured22{
  margin-right:-20px;
 }
 .featured-text{
 float:left;
 width:100%;
 }
-.featured-text h4{ 
+.featured-text h4{
 margin-top:16px;
 margin-bottom:0px;
 }
-.featured-text span{ 
+.featured-text span{
 font-size:16px;
 }
 .featured-margin{
@@ -1258,7 +1258,7 @@ border-radius: 4px;
 }
 .featured .featured-images
 {
- 
+
 height:140px;
 width:140px;
 position:absolute;
@@ -1266,13 +1266,13 @@ position:absolute;
 .featured .featured-images img{border-radius:4px;}
 .featured:hover .featured-hover
 {
-display:block; 
+display:block;
 border-radius:4px;
 background:#000000;
 opacity: .6;
-cursor: pointer; 
+cursor: pointer;
 z-index:9999;
-cursor: url(../images/more.png)80 40, crosshair; 
+cursor: url(../images/more.png)80 40, crosshair;
 }
 .featured-hover
 {
@@ -1280,24 +1280,24 @@ height:140px;
 width:140px;
 border-radius:4px;
 position: relative;
- 
+
 display:none;
 z-index:9999;
- 
+
 }
-.featured .featured-hover:hover{ 
+.featured .featured-hover:hover{
 
 }
 .right-cursor2{
 position: absolute;
 height: 87px;
 width: 24px;
- 
+
 margin-top: -15px;
 color: #ffffff;
 margin-left: 42px;
 font-size: 60px;
-font-weight: 600; 
+font-weight: 600;
 }
 .left-cursor2{
 height: 87px;
@@ -1308,10 +1308,10 @@ font-size: 60px;
 float: right;
 color: #ffffff;
 font-weight: 600;
- 
+
 }
 .featured-drivers-wrapper .carousel-inner {
-position: relative; 
+position: relative;
 overflow: hidden;
 width: 83% !important;
 margin: 0px auto;
@@ -1358,7 +1358,7 @@ margin-top:26px;
 font-size:16px;
 padding-left:10px;
 }
-.pa25-btn{ 
+.pa25-btn{
 text-align:center;
 width:160px;
 height:50px;
@@ -1417,10 +1417,10 @@ margin-left:-3px;
 font-size:14px;
 }
 .page25-content:hover{
- background:#F1C40F; 
+ background:#F1C40F;
 }
 .page25-content:hover .page25-clipart{
- background:url(../images/clipart-hover.png) no-repeat; 
+ background:url(../images/clipart-hover.png) no-repeat;
 }
 .p25-minicar-clipartwrap{
 height: 29px;
@@ -1438,7 +1438,7 @@ text-align:center;
 line-height:34px;
 }
 .page25-clipart{
-float:left; 
+float:left;
 width:36px;
 height:29px;
 background:url(../images/clipart2.png) no-repeat;
@@ -1454,23 +1454,23 @@ margin-top:50px;
 margin-bottom:51px;
 }
 .minicar-promo2{
-width:98%; 
+width:98%;
 float:left;
 display:block;
 background:url(../images/form-headr-bg2.jpg) repeat-y right;
 border:1px solid #2C3E50;
-margin-bottom: 20px; 
+margin-bottom: 20px;
 transition: all 100ms ease-in;
 -webkit-transition: all 100ms ease-in;
 -o-transition: all 100ms ease-in;
 -moz-transition: all 100ms ease-in;
 }
-.minicar-promo2:hover{border:6px solid #2C3E50;width:100%; margin-bottom: 20px !important;margin-left:-6px !important;margin-top:-5px !important; } 
+.minicar-promo2:hover{border:6px solid #2C3E50;width:100%; margin-bottom: 20px !important;margin-left:-6px !important;margin-top:-5px !important; }
 .minicar-promo2:hover .minicar-promo-text-btnwrap2{display:block;}
-.minicar-promo-cont2{ 
+.minicar-promo-cont2{
 width: 101px;
-height: 38px; 
-margin: 0px auto; 
+height: 38px;
+margin: 0px auto;
 }
 .Large-Vehicle{
 margin-top: 10px !important;
@@ -1495,19 +1495,19 @@ width: 64%;
 float: left;
 height: 168px;
 }
-.page26 .minicar-promo2 .minicar-promo-text1 .minicar-promo-text3{ 
+.page26 .minicar-promo2 .minicar-promo-text1 .minicar-promo-text3{
 min-width: 65px;
-margin-left:30px; 
-float: left; 
+margin-left:30px;
+float: left;
 margin-top:16px;
 }
 .containt-text-man2{
 height:62px;
-width:62px; 
+width:62px;
 }
 .containt-text-bag2{
 height:62px;
-width:62px; 
+width:62px;
 margin-top:11px;
 }
 .containt-text-man2 img{
@@ -1521,16 +1521,16 @@ padding:0px;
 .containt-text-man2 a{
 float: left;
 width: 64px;
-height: 64px;  
+height: 64px;
 line-height: 53px;
-text-align: center; 
+text-align: center;
 }
 .containt-text-bag2 a{
 float: left;
 width: 64px;
-height: 64px;  
+height: 64px;
 line-height: 53px;
-text-align: center; 
+text-align: center;
 }
 .page26 .minicar-promo2 .minicar-promo-text1 .clipart-wrap2{
 height: 97px;
@@ -1555,7 +1555,7 @@ width: 29px;
 margin-top:13px;
 height: 36px;
 background:url(../images/clipart.png) no-repeat;
-float:left; 
+float:left;
 text-align:center;
 }
 .clipart2 a{
@@ -1567,7 +1567,7 @@ font-family: 'SourceSansPro Light';
 width: 29px;
 height: 36px;
 background:url(../images/clipart.png) no-repeat;
-float:left; 
+float:left;
 text-align:center;
 margin-top:38px;
 }
@@ -1588,14 +1588,14 @@ font-size:14px;
 margin-top:-9px;
 
 }
- 
+
 .minicar-promo-text-btnwrap2 .page26-button-wrap .minicar-promo-text-btn2{
 text-align: center;
 font-family:SourceSansPro Light;
 font-weight:bold;
 width: 190px;
-height: 53px; 
-font-size: 18px; 
+height: 53px;
+font-size: 18px;
 font-size:22px;
 transition: all 100ms ease-in;
 -webkit-transition: all 100ms ease-in;
@@ -1603,7 +1603,7 @@ transition: all 100ms ease-in;
 -moz-transition: all 100ms ease-in;
 }
 .minicar-promo-text-btnwrap2{
-width:100%; 
+width:100%;
 display:none;
 float:left;
 }
@@ -1620,12 +1620,12 @@ float:left;
 margin-bottom:75px;
 }
 .minicar-promo{
-width:96%; 
+width:96%;
 float:left;
 margin-top:20px;
 display:block;
 background:url(../images/form-headr-bg2.jpg) repeat-x;
-border:1px solid #2C3E50; 
+border:1px solid #2C3E50;
 transition: all 100ms ease-in;
 -webkit-transition: all 100ms ease-in;
 -o-transition: all 100ms ease-in;
@@ -1644,9 +1644,9 @@ width:100%;
 float:left;
 margin-top:8px;
 }
-.minicar-promo-cont{ 
+.minicar-promo-cont{
 width: 78px;
-height: auto; 
+height: auto;
 margin: 0px auto;
 margin-top: 40px;
 }
@@ -1659,7 +1659,7 @@ padding-bottom:14px;
 .containt-text-man{
 height:62px;
 width:62px;
-float:left; 
+float:left;
 margin-left: 40px;
 }
 .minicar-promo-text2{
@@ -1674,7 +1674,7 @@ margin-top: 27px;
 .minicar-promo-text{}
 .containt-text{
 
-float:left; 
+float:left;
 }
 .containt-text-man img{
 margin:0px;
@@ -1683,9 +1683,9 @@ padding:0px;
 .containt-text-man a{
 float: left;
 width: 64px;
-height: 64px;  
+height: 64px;
 line-height: 53px;
-text-align: center; 
+text-align: center;
 }
 .clipart{
 width:36px;
@@ -1701,7 +1701,7 @@ line-height:35px;
 font-family: 'SourceSansPro Light';
 }
 .clipart-wrap{
-height:29px; 
+height:29px;
 float:left;
 margin-top:10px;
 margin-left: 14px;
@@ -1741,27 +1741,27 @@ margin-top:54px;
 }
 .minicar-promo-contbigtrack{
 width: 78px;
-height: auto; 
+height: auto;
 margin: 0px auto;
 margin-top: 26px;
 }
 .minicar-promo-cont-vihicel{
 width: 78px;
-height: auto; 
+height: auto;
 margin: 0px auto;
 margin-top: 19px;
 }
 .minicar-promo-conttractor{
 width: 78px;
-height: auto; 
+height: auto;
 margin: 0px auto;
 margin-top: 28px;
 }
 .minicar-promo-contmotorbiak{width: 78px;
-height: auto; 
+height: auto;
 margin: 0px auto;
 margin-top: 35px;
-} 
+}
 
 /*=================== page no 27 css exit ======================== */
 /*=================== page no 28 css start ======================== */
@@ -1771,7 +1771,7 @@ margin-top:0px;
 margin-bottom:60px;
 }
 .page28-minicar-promo{
-width:94%; 
+width:94%;
 float:left;
 overflow:hidden;
 background:url(../images/form-headr-bg2.jpg) repeat-x;
@@ -1783,7 +1783,7 @@ transition: all 100ms ease-in;
 -moz-transition: all 100ms ease-in;
 }
 .page28-minicar-promo:hover{
-width:97%; 
+width:97%;
 float:left;
 overflow:hidden;
 background:url(../images/form-headr-bg2.jpg) repeat-x;
@@ -1796,9 +1796,9 @@ width:100%;
 float:left;
 margin-top:8px;
 }
-.minicar-promo-cont2{ 
+.minicar-promo-cont2{
 width: 101px;
-height: 57px; 
+height: 57px;
 margin: 0px auto;
 margin-top: 30px;
 text-align:center;
@@ -1821,10 +1821,10 @@ margin-top:24px !important;
 .containt-text-profile{
 height:62px;
 width:62px;
-float:left; 
+float:left;
 }
 .containt-text-profile2{
-margin-left:23px; 
+margin-left:23px;
 }
 .containt-text-profile img{
 margin:0px;
@@ -1833,9 +1833,9 @@ padding:0px;
 .containt-text-profile a{
 float: left;
 width: 64px;
-height: 64px;  
+height: 64px;
 line-height: 53px;
-text-align: center; 
+text-align: center;
 }
 .p28-minicar-clipartwrap{
 height: 29px;
@@ -1844,13 +1844,13 @@ margin: 0px auto;
 margin-top:10px !important;
 }
 .page28-clipart{
-float:left; 
+float:left;
 width:36px;
 height:29px;
 background:url(../images/clipart2.png) no-repeat;
 text-align:center;
 }
-.page28-clipart a{ 
+.page28-clipart a{
 font-size:18px;
 
 }
@@ -1877,7 +1877,7 @@ width: 150px;
 height: 38px;
 margin: 0px auto;
 font-weight: bold;
-font-size: 18px; 
+font-size: 18px;
 font-size: 18px;
 padding: 6px 16px;
 -webkit-transition: all 150ms ease-in;
@@ -1887,7 +1887,7 @@ padding: 6px 16px;
 .button-wrap{
 
 margin:0px auto;
-width:150px; 
+width:150px;
 margin-top: 18px;
 margin-bottom: 10px;
 }
@@ -1898,7 +1898,7 @@ margin-top: 30px;
 margin-bottom: 30px;
 width: 100%;
 float: left;
-} 
+}
 .short-banner{
 float:left;
 width:100%;
@@ -1943,7 +1943,7 @@ float:left;
 width:100%;
 margin-top:8px;
 }
-.contact-details-car-wrap{ 
+.contact-details-car-wrap{
 width: 76px;
 height: 38px;
 margin: 0px auto;
@@ -1995,23 +1995,23 @@ font-size:16px;
 text-align:left;
 padding-left:10px;
 line-height: 23px;
-font-weight: 600; 
+font-weight: 600;
 }
 
-.Car-Type-wrap-margin{ 
+.Car-Type-wrap-margin{
 margin-top: 30px;
 margin-bottom: 40px;
 }
 .contact-details-wrap-footer{
 float:left;
-width:100%; 
+width:100%;
 margin-top:8px;
 }
 .contact-details-wrap-footer span{
 float:left;
 margin-top: 44px;
 margin-left:61px;
-font-size:16px; 
+font-size:16px;
 }
 .contact-details-wrap-footer h2{
 float:left;
@@ -2023,7 +2023,7 @@ margin-bottom:28px;
 .contact-details-wrap-footer p{
 font-size:12px;
 margin-top:47px;
-} 
+}
 /*=================== page no 29 css exit ======================== */
 /*=================== page no 30 css start ======================== */
 .page30-wrap{
@@ -2033,7 +2033,7 @@ width:100%;
 }
 .item-details-wrap{
 width:100%;
-border:1px solid #2C3E50;  
+border:1px solid #2C3E50;
 margin-bottom:40px;
 float:left;
 }
@@ -2048,10 +2048,10 @@ width:220px;
 }
 .item-details-content{
 float:left;
-width:220px; 
+width:220px;
 }
 .item-details-content2{
-margin: 0px auto !important; 
+margin: 0px auto !important;
 width: 105px;
 margin-top: 66px !important;
 height:51px;
@@ -2100,10 +2100,10 @@ text-align: center;
 
 .clipart3{
 width: 34px;
- 
+
 height: 36px;
 background:url(../images/clipart.png) no-repeat;
-float:left; 
+float:left;
 text-align:center;
 margin-top: 39px;
 }
@@ -2116,7 +2116,7 @@ font-family: 'SourceSansPro Light';
 width: 34px;
 height: 36px;
 background:url(../images/clipart.png) no-repeat;
-float:left; 
+float:left;
 text-align:center;
 margin-top:56px;
 }
@@ -2126,14 +2126,14 @@ line-height:35px;
 font-family: 'SourceSansPro Light';
 }
 .service-wrap{
-float:left; 
+float:left;
 min-width:368px;
 padding-top: 33px;
 }
 .service-wrap1{
 width:143px;
 float:left;
-text-align:right; 
+text-align:right;
 }
 .service-wrap1 span{
 font-size:16px;
@@ -2141,12 +2141,12 @@ text-align:left;
 padding-left:10px;
 line-height: 23px;
 font-weight: 600;
-font-family: 'SourceSansPro Light'; 
+font-family: 'SourceSansPro Light';
 }
 .service-wrap2{
 width:226px;
 float:left;
-text-align:left; 
+text-align:left;
 }
 .service-wrap2 span{
 font-size:16px;
@@ -2154,7 +2154,7 @@ text-align:left;
 padding-left:10px;
 line-height: 23px;
 font-weight: 600;
-font-family: 'SourceSansPro Light'; 
+font-family: 'SourceSansPro Light';
 }
 .Roundtrip-Fare{
 float: left;
@@ -2184,7 +2184,7 @@ font-size:16px;
 width: 96.5%;
 }
 .completing-form{
-width:65.3%; 
+width:65.3%;
 }
 .form-group .completing-form .form-control{margin-left:-4px;}
 .control-label2 span{
@@ -2203,7 +2203,7 @@ width: 84%;
 margin-left: 20px;
 margin-top:6px;
 }
-.add-wrap{ 
+.add-wrap{
 margin-top:8px;
 height:210px;
 width:300px;
@@ -2221,7 +2221,7 @@ float:left;
 .page30-form-wrapper .add-wrap .add-text h2{
 font-size:36px;
 padding: 0px 29px;
-} 
+}
 /*=================== page no 30 css exit ======================== */
 /* *************** footer css content start ******************* */
 .custom-footer{
@@ -2252,9 +2252,9 @@ margin-left:20px;
 margin-left:20px;
 }
 .menu-header{
-width:100%; 
+width:100%;
 }
-.menu-header p{ 
+.menu-header p{
 text-align:left;
 font-size:20px;
 }
@@ -2284,7 +2284,7 @@ margin-top:20px;
 .footer-map-bg{
 width:100%;
 float:right;
-background:url(../images/map-bg3.png)no-repeat; 
+background:url(../images/map-bg3.png)no-repeat;
 height:250px;
 }
 
@@ -2297,11 +2297,11 @@ height:40px;
 .social-item a{
 float: left;
 width: 32px;
-height: 32px; 
+height: 32px;
 margin-right: 5px;
 font-size: 20px;
 line-height: 32px;
-text-align: center; 
+text-align: center;
 }
 
 .img-circle {
@@ -2311,21 +2311,21 @@ border-radius: 50%;
 width:100%;
 margin:0px auto;
 }
-.copy-right span{ 
+.copy-right span{
 font-size:14px;
 font-family:Track;
 font-weight:bold;
 }
-.copy-right p{ 
-text-align:center; 
+.copy-right p{
+text-align:center;
 font-size:14px;
 }
-/* *************** footer css exit ******************* */ 
+/* *************** footer css exit ******************* */
 
 .date-form { margin: 10px; }
 label.control-label span { cursor: pointer; }
 
-/* *************** Preloader ******************* */ 
+/* *************** Preloader ******************* */
 #preloader {
 	position:fixed;
 	display: table;
@@ -2353,10 +2353,10 @@ text-align: center;
 margin-top: 21px;
 font-family: SourceSansPro Light;
 font-size: 32px;
-display: inline-block; 
+display: inline-block;
 width: 32%
 }
- 
+
 
 
  .navbar-default .navbar-collapse, .navbar-default .navbar-form{border:none !important;box-shadow: none !important;}

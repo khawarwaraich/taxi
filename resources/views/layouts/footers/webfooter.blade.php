@@ -11,27 +11,6 @@
                                     <ul>
                                         <li><a href="page26.html">About</a></li>
                                         <li><a href="page27.html">Services</a></li>
-                                        <li><a href="page30.html">Career</a></li>
-                                        <li><a href="index.html">Media</a></li>
-                                        <li><a href="">Adverise </a></li>
-                                        <li><a href="">Fleet</a></li>
-                                        <li><a href="">Tariff</a></li>
-                                        <li><a href="">Partners</a></li>
-                                        <li><a href="">About</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="menu-col menu-col-margin">
-                                <div class="menu-item menu-item2">
-                                    <ul>
-                                        <li><a href="">My Account</a></li>
-                                        <li><a href="">Print Notice</a></li>
-                                        <li><a href="">Vehicle Guide</a></li>
-                                        <li><a href="">Easy Cabs</a></li>
-                                        <li><a href="">About </a></li>
-                                        <li><a href="">Services</a></li>
-                                        <li><a href="">Career</a></li>
-                                        <li><a href="">Media</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -42,10 +21,6 @@
                                         <li><a href="">97-99 Isabella St</a></li>
                                         <li><a href="">London SE1 8DD</a></li>
                                         <li><a href="">United Kingdom</a></li>
-                                        <li class="menu-header menu-item3"><p>Queensland</p></li>
-                                        <li><a href="">Columbo House </a></li>
-                                        <li><a href="">50-60 Blackfriars Rd</a></li>
-                                        <li><a href="">Blackfriars, London</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -89,7 +64,7 @@
                     </a>
                 </div>
                 <div class="copy-right">
-                    <p><span>TAKSI</span> &copy; Copyright 2014 | All Rights Rerved  | Designed by <a href="http://themeforest.net/user/vishnusathyan">Vishnu Sathyan</a> | Developed By <a href="http://www.themeskanon.com/">Themeskanon</a></p>
+                    <p><span>The Quickest Delivery</span> &copy; Copyright {{ now()->year }} | All Rights Resrved | Developed By <a href="http://khawarr.com/" target="_blank">Khawar Hussain</a></p>
                 </div>
             </div>
         </div>
