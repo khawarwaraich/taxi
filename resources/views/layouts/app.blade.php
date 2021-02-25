@@ -9,24 +9,24 @@
 
         <title>{{ config('app.name', 'RMS') }}</title>
         <!-- Favicon -->
-        <link href="{{ asset('public/argon') }}/img/brand/favicon.png" rel="icon" type="image/png">
+        <link href="{{ asset('argon') }}/img/brand/favicon.png" rel="icon" type="image/png">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
         <!-- Icons -->
-        <link href="{{ asset('public/argon') }}/vendor/nucleo/css/nucleo.css" rel="stylesheet">
-        <link href="{{ asset('public/argon') }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+        <link href="{{ asset('argon') }}/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+        <link href="{{ asset('argon') }}/vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
         <!-- Argon CSS -->
-        <link type="text/css" href="{{ asset('public/argon') }}/css/argon.css" rel="stylesheet">
-        <link type="text/css" href="{{ asset('public/argon') }}/css/dataTables.bootstrap4.min.css" rel="stylesheet">
-        <link type="text/css" href="{{ asset('public/argon') }}/css/buttons.bootstrap4.min.css" rel="stylesheet">
-        <link type="text/css" href="{{ asset('public/argon') }}/css/select.bootstrap4.min.css" rel="stylesheet">
-        <link type="text/css" href="{{ asset('public/argon') }}/css/dropify.css" rel="stylesheet">
-        <link type="text/css" href="{{ asset('public/argon') }}/css/select2.min.css" rel="stylesheet">
-        <script src="{{ asset('public/argon') }}/vendor/jquery/dist/jquery.min.js"></script>
-        <script src="{{ asset('public/argon') }}/js/dropify.js"></script>
+        <link type="text/css" href="{{ asset('argon') }}/css/argon.css" rel="stylesheet">
+        <link type="text/css" href="{{ asset('argon') }}/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+        <link type="text/css" href="{{ asset('argon') }}/css/buttons.bootstrap4.min.css" rel="stylesheet">
+        <link type="text/css" href="{{ asset('argon') }}/css/select.bootstrap4.min.css" rel="stylesheet">
+        <link type="text/css" href="{{ asset('argon') }}/css/dropify.css" rel="stylesheet">
+        <link type="text/css" href="{{ asset('argon') }}/css/select2.min.css" rel="stylesheet">
+        <script src="{{ asset('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
+        <script src="{{ asset('argon') }}/js/dropify.js"></script>
 
         <!-- Argon JS -->
-        <script src="{{ asset('public/argon') }}/js/argon.js"></script>
+        <script src="{{ asset('argon') }}/js/argon.js"></script>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key="></script>
 
     </head>
@@ -45,18 +45,18 @@
             @include('layouts.footers.guest')
         @endguest
 
-        <script src="{{ asset('public/argon') }}/js/jquery.validate.min.js"></script>
+        <script src="{{ asset('argon') }}/js/jquery.validate.min.js"></script>
         <script src="{{ asset('argon') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <!-- DataTables JS -->
-        <script src="{{ asset('public/argon') }}/vendor/dataTables/jquery.dataTables.min.js"></script>
-        <script src="{{ asset('public/argon') }}/vendor/dataTables/dataTables.bootstrap4.min.js"></script>
+        <script src="{{ asset('argon') }}/vendor/dataTables/jquery.dataTables.min.js"></script>
+        <script src="{{ asset('argon') }}/vendor/dataTables/dataTables.bootstrap4.min.js"></script>
         <script src="{{ asset('argon') }}/vendor/dataTables/dataTables.buttons.min.js"></script>
-        <script src="{{ asset('public/argon') }}/vendor/dataTables/buttons.bootstrap4.min.js"></script>
-        <script src="{{ asset('public/argon') }}/vendor/dataTables/buttons.html5.min.js"></script>
-        <script src="{{ asset('public/argon') }}/vendor/dataTables/buttons.flash.min.js"></script>
-        <script src="{{ asset('public/argon') }}/vendor/dataTables/buttons.print.min.js"></script>
-        <script src="{{ asset('public/argon') }}/vendor/dataTables/dataTables.select.min.js"></script>
-        <script src="{{ asset('public/argon') }}/js/select2.min.js"></script>
+        <script src="{{ asset('argon') }}/vendor/dataTables/buttons.bootstrap4.min.js"></script>
+        <script src="{{ asset('argon') }}/vendor/dataTables/buttons.html5.min.js"></script>
+        <script src="{{ asset('argon') }}/vendor/dataTables/buttons.flash.min.js"></script>
+        <script src="{{ asset('argon') }}/vendor/dataTables/buttons.print.min.js"></script>
+        <script src="{{ asset('argon') }}/vendor/dataTables/dataTables.select.min.js"></script>
+        <script src="{{ asset('argon') }}/js/select2.min.js"></script>
         @stack('js')
     </body>
 </html>
