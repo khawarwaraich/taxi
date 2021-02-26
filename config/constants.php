@@ -8,6 +8,7 @@ if (!app()->runningInConsole()) {
     define("BASE_URL", $server_name);
     define("ADMIN_BASE_URL", $server_name . '/admin');
 
+    define("FRONT_IMAGES", '/front/images');
 
     //Categories Images Path
     define("ORIGNAL_IMAGE_PATH_CATEGORIES", '/uploads/categories/orignal_images/');
