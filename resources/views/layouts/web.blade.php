@@ -23,8 +23,16 @@
 		<link href="{{ asset('front/fonts/css/font-awesome.min.css') }}" rel="stylesheet">
 
 
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyAKwIV-6y31LwzBieBhJqAztrZL9C76T7Y"></script>
-
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDg8qgq-reRY6-xQKfdOSS8JJgmDSLF2pU"></script>
+        <style>
+            #map-canvas {
+    height: 65% !important;
+            }
+            .bg-taxi{
+               background: #F1C40F;
+               height: 200px;
+            }
+        </style>
     </head>
     <body>
         <div id="preloader">
@@ -39,7 +47,7 @@
 
             @include('layouts.footers.webfooter')
 
-            <script src="{{ asset('front/js/jquery.js') }}"></script>
+            {{-- <script src="{{ asset('front/js/jquery.js') }}"></script> --}}
             <script src="{{ asset('front/js/menu/jquery.min.js') }}"></script>
             <script src="{{ asset('front/js/menu/modernizr.custom.js') }}"></script>
             <script src="{{ asset('front/js/menu/jquery.dlmenu.js') }}"></script>
@@ -49,11 +57,33 @@
             <script src="{{ asset('front/js/uikit.js') }}" type="text/javascript"></script>
             <script src="{{ asset('front/js/jquery.stellar.js') }}"></script>
             <script src="{{ asset('front/js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('front/js/g-map/map.js') }}" type="text/javascript"></script>
             <script src="{{ asset('front/js/bootstrap-select.js') }}"></script>
             <script src="{{ asset('front/js/jquery-ui.min.js') }}" type="text/javascript"></script>
             <script src="{{ asset('front/js/custom.js') }}" type="text/javascript"></script>
             <script src="{{ asset('front/js/custom2.js') }}" type="text/javascript"></script>
             <script src="{{ asset('front/js/menu/custom-menu.js') }}"></script>
             <script src="{{ asset('front/scripts/google-scripts.js') }}"></script>
+
+            <script defer>
+                $(".book-now").on("click", function(){
+                    booking_arr = localStorage.getItem('booking_arr');
+                    if(booking_arr != null)
+                    {
+                        localStorage.clear();
+                    }
+                    var cat_id = $(this).attr('data-catID');
+                    var customer_id = $(this).attr('data-userID');
+                    var order_amount = $(this).attr('data-fare');
+
+                    var booking_arr = [{
+                        'category_id' : cat_id,
+                        'customer_id' : customer_id,
+                        'order_amount' : order_amount
+                    }];
+                    console.log(booking_arr)
+                    localStorage.setItem("booking_arr", JSON.stringify(booking_arr));
+                });
+                </script>
     </body>
 </html>

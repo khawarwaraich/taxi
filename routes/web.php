@@ -59,4 +59,5 @@ Route::group(['prefix' => 'admin','middleware' => ['auth'],'as' => 'admin:'], fu
 
 ///Front Routes
 Route::get('/', ['as' => '/','uses' => 'HomeController@front']);
+Route::get('/login', ['as' => 'login','uses' => 'HomeController@front_login']);
 Route::any('/request-drive', ['as' => 'request-drive','uses' => 'RideController@requestDrive']);

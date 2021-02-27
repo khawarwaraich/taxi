@@ -21,7 +21,7 @@
                     <div id="languages" class="resister-social">
 
                         <div class="login-register login">
-                            <a href="#">Login</a>
+                            <a href="{{ route('login') }}">Login</a>
                             <a href="#">Register</a>
                         </div>
                     </div>

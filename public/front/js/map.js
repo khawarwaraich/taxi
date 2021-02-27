@@ -13,7 +13,7 @@ function initialize() {
   directionsDisplay.setPanel(document.getElementById('directions-panel'));
 
   var control = document.getElementById('control');
-  
+alert('ok')
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
 }
 

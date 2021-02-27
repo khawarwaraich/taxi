@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Ride;
 use GoogleMaps;
+use App\Catagories;
 use Illuminate\Http\Request;
 
 class RideController extends Controller
@@ -27,10 +28,28 @@ class RideController extends Controller
         $to['address'] = $to_location->results[0]->formatted_address;
         $to['lat'] = $to_location->results[0]->geometry->location->lat;
         $to['lng'] = $to_location->results[0]->geometry->location->lng;
-
+        $distanceMatrix = $this->getDistanceMatrix($from['lat'],$from['lng'],$to['lat'],$to['lng']);
+        $data['distance'] = $distanceMatrix['distance'];
+        $data['duration'] = $distanceMatrix['duration'];
+        $distance_value = number_format($distanceMatrix['distance_value'], 2);
+        $categories = Catagories::all();
+        if(isset($categories) && !empty($categories))
+        {
+            foreach($categories as $key => $value)
+            {
+                $charges_type = $value->charges_type;
+                $charges = $value->charges;
+                if($charges_type == "distance")
+                {
+                    $categories[$key]['amount'] = number_format($charges * $distance_value, 2);
+                }else{
+                    $categories[$key]['amount'] = $charges;
+                }
+            }
+        }
         $data['from_location'] = $from;
         $data['to_location'] = $to;
-
+        $data['categories'] = $categories;
         return view('ride_details', $data);
     }
 
@@ -40,6 +59,26 @@ class RideController extends Controller
  		->get();
          $response = json_decode($response);
          return $response;
+    }
+
+    public function getDistanceMatrix($from_lat,$from_lng,$to_lat,$to_lng){
+        $responce = file_get_contents('https://maps.googleapis.com/maps/api/distancematrix/json?&origins=' . $from_lat . ',' . $from_lng . '&destinations=' . $to_lat . ',' . $to_lng . '&key=AIzaSyDg8qgq-reRY6-xQKfdOSS8JJgmDSLF2pU');
+        $responce = json_decode($responce);
+        $outer_status = $responce->status;
+        if (isset($outer_status) && $outer_status == "OK"){
+            if(isset($responce->rows[0]->elements[0]->distance->text))
+            {
+                $data['distance'] = $responce->rows[0]->elements[0]->distance->text;
+                $data['distance_value'] = $responce->rows[0]->elements[0]->distance->value / 1000;
+            }
+            if(isset($responce->rows[0]->elements[0]->duration->text))
+            {
+                $data['duration'] = $responce->rows[0]->elements[0]->duration->text;
+            }
+
+        }
+
+        return $data;
     }
 
     /**
