@@ -30,7 +30,8 @@ class RideController extends Controller
 
         $data['from_location'] = $from;
         $data['to_location'] = $to;
-        return $data;
+
+        return view('ride_details', $data);
     }
 
     public function getAdressAttr($address){

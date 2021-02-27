@@ -16,13 +16,11 @@ class AppAuthController extends Controller
         $validator = Validator::make(
             $request->all(),
             [
-                'name' => 'required|min:3',
-                'email' => 'required|email|unique:users',
-                'password' => 'required|min:6',
+                'email' => 'email|unique:users',
             ]
         );
         if ($validator->fails()) {
-            return response()->json(['status' => $status, 'message' => $message ,'errors' => $validator->errors()]);
+            return response()->json(['status' => $status, 'message' => "Email address already taken"]);
         }
         $user = User::create([
             'name' => $request->name,
@@ -42,6 +40,8 @@ class AppAuthController extends Controller
 
     public function login(Request $request)
     {
+        $status = false;
+        $message = "Unauthorized User";
         $credentials = [
             'email' => $request->email,
             'password' => $request->password
@@ -49,9 +49,19 @@ class AppAuthController extends Controller
 
         if (auth()->attempt($credentials)) {
             $token = auth()->user()->createToken('QuickestDelivery')->accessToken;
-            return response()->json(['token' => $token, 'user' => auth()->user()], 200);
+            $status = true;
+            $message = "Login Successfull";
+            return response()->json([
+                'status' => $status,
+                'message' => $message,
+                'token' => $token,
+                'user' => auth()->user()],
+                200);
         } else {
-            return response()->json(['error' => 'UnAuthorised'], 401);
+            return response()->json([
+                'status' => $status,
+                'message' => $message],
+                401);
         }
     }
 }

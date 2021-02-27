@@ -54,6 +54,6 @@
             <script src="{{ asset('front/js/custom.js') }}" type="text/javascript"></script>
             <script src="{{ asset('front/js/custom2.js') }}" type="text/javascript"></script>
             <script src="{{ asset('front/js/menu/custom-menu.js') }}"></script>
-            <script src="{{ asset('front/js/google-scripts.js') }}"></script>
+            <script src="{{ asset('front/scripts/google-scripts.js') }}"></script>
     </body>
 </html>
