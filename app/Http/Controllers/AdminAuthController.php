@@ -20,7 +20,7 @@ class AdminAuthController extends Controller
             'password' => 'required|min:4',
         ]);
 
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password, 'role' => 'admin'])) {
+        if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
             return view('dashboard');
         }else{
             return back();

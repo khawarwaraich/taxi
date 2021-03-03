@@ -31,10 +31,9 @@
 
     </head>
     <body class="{{ $class ?? '' }}">
-        @auth()
-            <!-- User Outlets Session and details -->
+        @if(Auth::guard('admin')->check())
               @include('layouts.navbars.sidebar')
-        @endauth
+        @endif
 
         <div class="main-content">
             @include('layouts.navbars.navbar')

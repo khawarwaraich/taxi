@@ -20,7 +20,7 @@ Route::post('auth', ['as' => 'login.auth', 'uses' => 'AdminAuthController@login_
 
 });
 
-Route::group(['prefix' => 'admin','middleware' => ['auth'],'as' => 'admin:'], function () {
+Route::group(['prefix' => 'admin','middleware' => ['admin.auth'],'as' => 'admin:'], function () {
 
   Route::get('/dashboard', ['as' => 'home', 'uses' => 'HomeController@index']);
   Route::any('logout', ['as' => 'logout', 'uses' => 'AdminAuthController@logout']);
@@ -60,4 +60,12 @@ Route::group(['prefix' => 'admin','middleware' => ['auth'],'as' => 'admin:'], fu
 ///Front Routes
 Route::get('/', ['as' => '/','uses' => 'HomeController@front']);
 Route::get('/login', ['as' => 'login','uses' => 'HomeController@front_login']);
+Route::get('/register', ['as' => 'register.customer','uses' => 'HomeController@register']);
+Route::post('/front/login', ['as' => 'login.web','uses' => 'HomeController@auth']);
+Route::get('/logout', ['as' => 'logout','uses' => 'HomeController@logout']);
+Route::post('/front/register', ['as' => 'register.user','uses' => 'HomeController@registerUser']);
 Route::any('/request-drive', ['as' => 'request-drive','uses' => 'RideController@requestDrive']);
+Route::group(['middleware' => ['auth:web']], function () {
+Route::get('/checkout', ['as' => 'checkout','uses' => 'BookingController@checkout']);
+Route::post('/book-ride', ['as' => 'book-ride','uses' => 'BookingController@bookRide']);
+});

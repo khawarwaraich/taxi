@@ -701,6 +701,8 @@ class ComposerStaticInitba0d9bf4b5791434947e1be10d0757ee
     );
 
     public static $classMap = array (
+        'App\\Admin' => __DIR__ . '/../..' . '/app/Admin.php',
+        'App\\Booking' => __DIR__ . '/../..' . '/app/Booking.php',
         'App\\Catagories' => __DIR__ . '/../..' . '/app/Catagories.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\DataProviders\\CountryStateCityDataProvider' => __DIR__ . '/../..' . '/app/DataProviders/CountryStateCityDataProvider.php',
@@ -726,6 +728,7 @@ class ComposerStaticInitba0d9bf4b5791434947e1be10d0757ee
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Middleware\\adminAuth' => __DIR__ . '/../..' . '/app/Http/Middleware/adminAuth.php',
         'App\\Http\\Requests\\PasswordRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PasswordRequest.php',
         'App\\Http\\Requests\\ProfileRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProfileRequest.php',
         'App\\Http\\Requests\\UserRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UserRequest.php',

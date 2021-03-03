@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Admin' => $baseDir . '/app/Admin.php',
+    'App\\Booking' => $baseDir . '/app/Booking.php',
     'App\\Catagories' => $baseDir . '/app/Catagories.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\DataProviders\\CountryStateCityDataProvider' => $baseDir . '/app/DataProviders/CountryStateCityDataProvider.php',
@@ -31,6 +33,7 @@ return array(
     'App\\Http\\Middleware\\TrustHosts' => $baseDir . '/app/Http/Middleware/TrustHosts.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Http\\Middleware\\adminAuth' => $baseDir . '/app/Http/Middleware/adminAuth.php',
     'App\\Http\\Requests\\PasswordRequest' => $baseDir . '/app/Http/Requests/PasswordRequest.php',
     'App\\Http\\Requests\\ProfileRequest' => $baseDir . '/app/Http/Requests/ProfileRequest.php',
     'App\\Http\\Requests\\UserRequest' => $baseDir . '/app/Http/Requests/UserRequest.php',

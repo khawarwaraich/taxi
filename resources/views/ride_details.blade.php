@@ -8,6 +8,8 @@ $end = $to_location['lat'].','.$to_location['lng'];
 @endphp
     <input type="hidden" id="start" value="{{$start}}">
     <input type="hidden" id="end" value="{{$end}}">
+    <input type="hidden" id="from" value="{{$from_location['address']}}">
+    <input type="hidden" id="to" value="{{$to_location['address']}}">
         <div id="map-canvas"></div>
         <hr>
     <div class="container">
@@ -84,7 +86,7 @@ $end = $to_location['lat'].','.$to_location['lng'];
 							<div class="row">
 								<div class="pa25-btn-wrapper">
 									<div class="pa25-btn-wrap">
-										<a href="#" class="btn pa25-btn btn-lg book-now" data-catID="{{$value->id ?? ''}}" data-userID="{{auth()->id() ?? 0}}" data-fare="{{$value->amount ?? 0.00}}">BOOK NOW</a>
+										<a href="javascript:void(0)" class="btn pa25-btn btn-lg book-now" data-catID="{{$value->id ?? ''}}" data-userID="{{auth()->id() ?? 0}}" data-fare="{{$value->amount ?? 0.00}}">BOOK NOW</a>
 									</div>
 								</div>
 							</div>

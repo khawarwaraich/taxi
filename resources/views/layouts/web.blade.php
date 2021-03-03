@@ -76,14 +76,36 @@
                     var customer_id = $(this).attr('data-userID');
                     var order_amount = $(this).attr('data-fare');
 
+                    var start = document.getElementById('from').value;
+                    var end = document.getElementById('to').value;
+
                     var booking_arr = [{
                         'category_id' : cat_id,
                         'customer_id' : customer_id,
+                        'start' : start,
+                        'end' : end,
                         'order_amount' : order_amount
                     }];
-                    console.log(booking_arr)
                     localStorage.setItem("booking_arr", JSON.stringify(booking_arr));
+                    window.location.href = "<?php BASE_URL; ?>/checkout?token="+cat_id;
+                    // $.ajax({
+                    //     url: "/checkout",
+                    //     type:"post",
+                    //     method:"post",
+                    //     data:{
+                    //     cat_id:cat_id,
+                    //     customer_id:customer_id,
+                    //     order_amount:order_amount,
+                    //     start:start,
+                    //     end:end,
+                    //     _token: '{{ csrf_token() }}'
+                    //     },
+                    //     success:function(response){
+                    //     console.log(response);
+                    //     },
+                    // });
                 });
                 </script>
+
     </body>
 </html>

@@ -12,18 +12,24 @@
                     <div class="logo-wraper">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="images/logo.png" alt="">
+                                <img src="{{ asset('front') }}/images/logo.png" alt="">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div id="languages" class="resister-social">
-
+                        @guest
                         <div class="login-register login">
                             <a href="{{ route('login') }}">Login</a>
-                            <a href="#">Register</a>
+                            <a href="{{ route('register.customer') }}">Register</a>
                         </div>
+                        @endguest
+                        @if(auth()->guard('web')->check())
+                        <div class="login-register login">
+                            <a href="{{ route('logout') }}">Logout</a>
+                        </div>
+                        @endif
                     </div>
                 </div>
                 <div class="col-sm-1">

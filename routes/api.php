@@ -19,4 +19,5 @@ Route::post('register', 'Api\AppAuthController@register');
 
 Route::middleware('auth:api')->group(function () {
     Route::get('get-data', 'Api\AppController@getData');
+    Route::post('book-drive', 'BookingController@appBooking');
 });

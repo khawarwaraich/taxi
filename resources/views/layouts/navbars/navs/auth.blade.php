@@ -13,7 +13,7 @@
                             <img alt="Image placeholder" src="{{ asset('argon') }}/img/user.png">
                         </span>
                         <div class="media-body ml-2 d-none d-lg-block">
-                            <span class="mb-0 text-sm  font-weight-bold">{{ auth()->user()->name }}</span>
+                            <span class="mb-0 text-sm  font-weight-bold">{{ auth()->guard('admin')->user()->name }}</span>
                         </div>
                     </div>
                 </a>
