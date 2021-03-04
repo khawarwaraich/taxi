@@ -63,6 +63,8 @@ Route::get('/login', ['as' => 'login','uses' => 'HomeController@front_login']);
 Route::get('/register', ['as' => 'register.customer','uses' => 'HomeController@register']);
 Route::post('/front/login', ['as' => 'login.web','uses' => 'HomeController@auth']);
 Route::get('/logout', ['as' => 'logout','uses' => 'HomeController@logout']);
+Route::get('/payment-success', ['as' => 'payment-success','uses' => 'BookingController@payment_success']);
+Route::get('/payment-error', ['as' => 'payment-error','uses' => 'BookingController@payment_error']);
 Route::post('/front/register', ['as' => 'register.user','uses' => 'HomeController@registerUser']);
 Route::any('/request-drive', ['as' => 'request-drive','uses' => 'RideController@requestDrive']);
 Route::group(['middleware' => ['auth:web']], function () {

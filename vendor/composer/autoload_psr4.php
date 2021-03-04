@@ -47,6 +47,7 @@ return array(
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
     'Symfony\\Bridge\\PsrHttpMessage\\' => array($vendorDir . '/symfony/psr-http-message-bridge'),
     'SwooleTW\\Http\\' => array($vendorDir . '/swooletw/laravel-swoole/src'),
+    'Stripe\\' => array($vendorDir . '/stripe/stripe-php/lib'),
     'Spatie\\Permission\\' => array($vendorDir . '/spatie/laravel-permission/src'),
     'Sentry\\' => array($vendorDir . '/sentry/sentry/src'),
     'Ramsey\\Uuid\\' => array($vendorDir . '/ramsey/uuid/src'),

@@ -24,6 +24,7 @@
         "mckenziearts/laravel-notify": "^2.1",
         "sentry/sentry-laravel": "^2.2",
         "spatie/laravel-permission": "^3.18",
+        "stripe/stripe-php": "^7.75",
         "swooletw/laravel-swoole": "^2.6",
         "yoeunes/toastr": "^1.2"
     },
