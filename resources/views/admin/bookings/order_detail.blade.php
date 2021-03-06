@@ -30,15 +30,12 @@
                     <hr class="my-4">
                     <h6 class="heading-small text-muted mb-4">Order Information</h6>
                     <div class="pl-lg-4">
-                        <h4><strong>Pickup Location:</strong> </h4>
-                        <h4>{{$booking->from_location}}</h4>
-                        <h4><strong>Drop Location:</strong> </h4>
-                        <h4>{{$booking->to_location}}</h4>
+                        <h4><strong>Transaction# :</strong> {{$booking->transaction_no ?? ''}}</h4>
+                        <h4><strong>Pickup Time :</strong> {{$booking->pickup_time ?? ''}}</h4>
+                        <h4><strong>Pickup Location:</strong> {{$booking->from_location ?? ''}}</h4>
+                        <h4><strong>Drop Location:</strong> {{$booking->to_location ?? ''}}</h4>
+                        <h4><strong>Order Note:</strong> {{$booking->note ?? "N/A"}}</h4>
                     </div>
-                    <hr>
-                    <br>
-                    <h4>Order Note: {{$booking->note ?? "N/A"}}</h4>
-                    <br>
                     <hr>
                     <h3>TOTAL: ${{$booking->order_total ?? 0.00}}</h3>
                     <hr>

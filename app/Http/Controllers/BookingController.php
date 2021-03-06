@@ -58,7 +58,8 @@ class BookingController extends Controller
             $data['full_name'] = $request->full_name;
             $data['email'] = $request->email;
             $data['phone'] = $request->phone;
-            $data['country'] = $request->country;
+            $data['transaction_no'] = $request->transaction_no;
+            $data['pickup_time'] = $request->pickup_time;
             $data['note'] = $request->note;
             $data['payment_status'] = 0;
 
@@ -99,7 +100,8 @@ class BookingController extends Controller
             $data['full_name'] = $order_data->full_name;
             $data['email'] = $order_data->email;
             $data['phone'] = $order_data->phone;
-            $data['country'] = $order_data->country;
+            $data['pickup_time'] = $request->pickup_time;
+            $data['transaction_no'] = $order_data->transaction_no;
             $data['note'] = $order_data->note;
             $data['payment_status'] = 0;
             $book = Booking::create($data);
@@ -133,8 +135,8 @@ class BookingController extends Controller
                     ],
                 ],
                 'mode' => 'payment',
-                'success_url' => 'http://thequickestdeliveryservice.com/payment-success?order_id=' . $id,
-                'cancel_url' => 'http://thequickestdeliveryservice.com/payment-cancel?order_id=' . $id,
+                'success_url' => 'https://thequickestdeliveryservice.com/payment-success?order_id=' . $id,
+                'cancel_url' => 'https://thequickestdeliveryservice.com/payment-cancel?order_id=' . $id,
             ]);
         } catch (Exception $e) {
             echo $e->getMessage();

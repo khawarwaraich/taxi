@@ -25,6 +25,13 @@
                         </span>
                         <form action="{{ route('register.user') }}" method="POST" class="login100-form validate-form p-l-55 p-r-55 p-t-20">
                             @csrf
+                            @if($message = Session::get('error'))
+                            <div class="col-lg-12">
+                              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                  {{$message}}
+                                </div>
+                            </div>
+                            @endif
                             <div class="wrap-input100 validate-input m-b-16">
                                 <input class="input100" type="text" name="name" placeholder="Enter your full name" required>
                                 <span class="focus-input100"></span>

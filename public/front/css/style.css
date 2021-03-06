@@ -2051,9 +2051,7 @@ width:220px;
 }
 .item-details-content2{
 margin: 0px auto !important;
-width: 105px;
-margin-top: 66px !important;
-height:51px;
+height: auto;
 text-align:center;
 }
 .item-details-content h2{
@@ -2156,8 +2154,8 @@ font-weight: 600;
 font-family: 'SourceSansPro Light';
 }
 .Roundtrip-Fare{
-float: left;
-width: 349px;
+float: right;
+width: 230px;
 text-align: center;
 height: 200px;
 }

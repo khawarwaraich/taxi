@@ -52,7 +52,7 @@ class HomeController extends Controller
 
         $name = $request->name;
         $email = $request->email;
-        $password = $request->pasword;
+        $password = $request->pass;
 
         $reg = User::create([
             'name' => $name,

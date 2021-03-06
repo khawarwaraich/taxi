@@ -60,7 +60,7 @@ $end = $to_location['lat'].','.$to_location['lng'];
 						<div class="col-sm-2">
 							<div class="row">
 								<div class="p25-minicar-wrap">
-									<div class="p25-minicar"><img src="{{$image}}"/></div>
+									<div class="p25-minicar"><img style="height: 100px;" src="{{$image}}"/></div>
 								</div>
 							</div>
 						</div>

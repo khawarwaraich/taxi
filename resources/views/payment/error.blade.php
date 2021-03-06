@@ -1,6 +1,7 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
     <style>
       body {
@@ -41,6 +42,7 @@
         <h1>Error</h1>
         <h4>Order ID: {{$order_id}}</h4>
         <p>Error occured in payment processing<br/> Get in touch for more informaton!</p>
+        <a class="btn btn-lg btn-danger mt-3" href="{{ BASE_URL }}"> Back to Home</a>
       </div>
     </body>
 </html>
