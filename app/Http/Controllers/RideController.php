@@ -41,7 +41,7 @@ class RideController extends Controller
                 $charges = $value->charges;
                 if($charges_type == "distance")
                 {
-                    $categories[$key]['amount'] = number_format($charges * $distance_value, 2);
+                    $categories[$key]['amount'] = $charges * $distance_value;
                 }else{
                     $categories[$key]['amount'] = $charges;
                 }

@@ -84,7 +84,7 @@
                         'customer_id' : customer_id,
                         'start' : start,
                         'end' : end,
-                        'order_amount' : order_amount
+                        'order_amount' : parseFloat(order_amount).toFixed(2)
                     }];
                     localStorage.setItem("booking_arr", JSON.stringify(booking_arr));
                     window.location.href = "<?php BASE_URL; ?>/checkout?token="+cat_id;

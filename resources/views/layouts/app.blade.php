@@ -40,7 +40,7 @@
             @yield('content')
         </div>
 
-        @guest()
+        @if(!Auth::guard('admin')->check())
             @include('layouts.footers.guest')
         @endguest
 

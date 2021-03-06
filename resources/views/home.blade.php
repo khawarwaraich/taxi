@@ -8,7 +8,7 @@
                 <li>
                     <div class="slider-img-wrap"><img src="https://miro.medium.com/max/3200/1*w2DBNHNdBQmSv9cisV95Tg.jpeg"/></div>
                     <div class="slider-text-content">
-                        <h1>Local taxis at the tap of a button</h1>
+                        <h1>Quickest Delivery at the tap of a button</h1>
                     </div>
                 </li>
             </ul>

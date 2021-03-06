@@ -5,9 +5,20 @@
             aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        @php
+        $name = "logo.jpg";
+        $path = BASE_URL.LARGE_IMAGE_PATH_OUTLET.$name;
+        $check_exist = File::exists(public_path().LARGE_IMAGE_PATH_OUTLET.$name);
+        if($check_exist == 1 && $name != '')
+        {
+          $image = $path;
+        }else{
+          $image = NO_IMAGE;
+        }
+        @endphp
         <!-- Brand -->
         <a class="navbar-brand admin-logo pt-0" href="{{ route('admin:home') }}">
-            <img src="" class="navbar-brand-img" alt="...">
+            <img src="{{$image}}" class="navbar-brand-img" alt="...">
         </a>
 
         <!-- Collapse -->
@@ -21,7 +32,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('admin:home') }}">
+                    <a class="nav-link" href="{{ route('admin:bookings') }}">
                         <i class="ni ni-active-40 text-success"></i> {{ __('Live Booking Orders') }}
                         <div class="blob red"></div>
                     </a>
@@ -37,11 +48,11 @@
                         <i class="ni ni-circle-08 text-orange"></i> {{ __('Customers') }}
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="{{route('admin:settings')}}">
                         <i class="ni ni-settings text-success"></i> {{ __('Settings & Features') }}
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </div>
     </div>

@@ -16,6 +16,8 @@ if (!app()->runningInConsole()) {
     define("MEDIUM_IMAGE_PATH_CATEGORIES", '/uploads/categories/medium_images/');
     define("SMALL_IMAGE_PATH_CATEGORIES", '/uploads/categories/small_images/');
 
+    define("LARGE_IMAGE_PATH_OUTLET", '/uploads/outlet/large_images/');
+
     //Users Images Path
     define("ORIGNAL_IMAGE_PATH_USERS", '/uploads/users/orignal_images/');
     define("LARGE_IMAGE_PATH_USERS", '/uploads/users/large_images/');

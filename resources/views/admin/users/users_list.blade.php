@@ -11,14 +11,6 @@
                 <div class="card bg-secondary shadow">
                   <div class="card">
               <!-- Card header -->
-              <div class="card-header text-right">
-                <a href="{{ route('admin:user.create') }}">
-                  <button class="btn btn-sm btn-icon btn-success" type="button">
-                     <span class="btn-inner--icon"><i class="ni ni-circle-08"></i></span>
-                     <span class="btn-inner--text">Register New User</span>
-                  </button>
-                </a>
-              </div>
               @if($message = Session::get('success'))
               <div class="col-12">
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -49,7 +41,7 @@
                       <th>Username</th>
                       <th>Email</th>
                       <th>Status</th>
-                      <th>Actions</th>
+                      {{-- <th>Actions</th> --}}
                     </tr>
                   </thead>
                   <tbody>
@@ -78,7 +70,7 @@
                         @endif
                       </span>
                     </td>
-                    <td class="text-center">
+                    {{-- <td class="text-center">
                       <div class="dropdown">
                         <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                           <i class="fas fa-ellipsis-v"></i>
@@ -93,7 +85,7 @@
                           <a class="dropdown-item" href="#">Delete</a>
                         </div>
                       </div>
-                    </td>
+                    </td> --}}
                     </tr>
                 @endforeach
                 @endif
@@ -107,28 +99,5 @@
 
         @include('layouts.footers.auth')
     </div>
-    <script type="text/javascript">
-          $('.status-change').on('click', function(){
-              var status = $(this).attr('rel');
-              var outlet_id = $(this).attr('data-outlet-id');
-              $.ajax({
-              type:'POST',
-              url:'{{ route("admin:outlet.status") }}',
-              data:{'status': status, 'outlet_id': outlet_id, '_token': "{{ csrf_token() }}"},
-              success:function(response) {
-                 var status = response.status;
-                 var message = response.message;
-                 var current_status = response.current_status;
-                 if(status == true)
-                 {
-                  location.reload();
-                  toastr.success(message);
-                 }else
-                 {
-                  toastr.error(message);
-                 }
-              }
-           });
-          });
-    </script>
+
 @endsection

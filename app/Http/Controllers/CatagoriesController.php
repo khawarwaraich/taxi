@@ -15,7 +15,7 @@ class CatagoriesController extends Controller
      */
     public function index()
     {
-        $data['categories'] = Catagories::all();
+        $data['categories'] = Catagories::latest('id')->get();
         return view('admin.categories.categories_list', $data);
     }
 

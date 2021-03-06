@@ -32,7 +32,7 @@ Route::group(['prefix' => 'admin','middleware' => ['admin.auth'],'as' => 'admin:
 
 
   //Users Routes
-  Route::get('users', ['as' => 'users', 'uses' => 'UserController@index'])->middleware('permission:View Users');
+  Route::get('users', ['as' => 'users', 'uses' => 'UserController@index']);
   Route::get('users/create', ['as' => 'user.create', 'uses' => 'UserController@create']);
   Route::post('users/add', ['as' => 'user.add', 'uses' => 'UserController@store']);
   Route::any('users/update/{id}', ['as' => 'user.update', 'uses' => 'UserController@store']);
@@ -54,6 +54,12 @@ Route::group(['prefix' => 'admin','middleware' => ['admin.auth'],'as' => 'admin:
     Route::get('categories/edit/{id}', ['as' => 'categories.edit', 'uses' => 'CatagoriesController@edit']);
     Route::post('categories/change_status', ['as' => 'categories.status', 'uses' => 'CatagoriesController@change_status']);
     Route::get('categories/destroy/{id}', ['as' => 'categories.destroy', 'uses' => 'CategoriesController@destroy']);
+
+
+    //Bookings
+    Route::get('bookings', ['as' => 'bookings', 'uses' => 'BookingController@index']);
+    Route::get('order/detail/{id}', ['as' => 'booking.detail', 'uses' => 'BookingController@orderDetail']);
+
 
 });
 

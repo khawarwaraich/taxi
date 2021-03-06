@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Catagories;
 use Illuminate\Database\Eloquent\Model;
 
 class Booking extends Model
@@ -11,4 +12,9 @@ class Booking extends Model
         'payment_status'
 
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Catagories::class);
+    }
 }

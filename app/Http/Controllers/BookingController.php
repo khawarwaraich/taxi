@@ -16,6 +16,15 @@ class BookingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function index(Request $request)
+    {
+        $data['bookings'] = Booking::latest('id')
+            ->with('category')
+            ->get();
+        return view('admin.bookings.booking_order', $data);
+    }
+
+
     public function checkout(Request $request)
     {
         $cat_id = $request->token;
@@ -23,6 +32,12 @@ class BookingController extends Controller
             $data['category'] = Catagories::find($cat_id);
             return view('checkout', $data);
         }
+    }
+
+    public function orderDetail($id)
+    {
+        $data['booking'] = Booking::find($id);
+        return view('admin.bookings.order_detail', $data);
     }
 
     /**
@@ -139,8 +154,7 @@ class BookingController extends Controller
     public function payment_success(Request $request)
     {
         $order_id = $request->order_id;
-        if(isset($order_id) && $order_id > 0)
-        {
+        if (isset($order_id) && $order_id > 0) {
             $order = Booking::find($order_id);
             $order->payment_status = 1;
             $order->save();
@@ -151,8 +165,7 @@ class BookingController extends Controller
     public function payment_error(Request $request)
     {
         $order_id = $request->order_id;
-        if(isset($order_id) && $order_id > 0)
-        {
+        if (isset($order_id) && $order_id > 0) {
             return view('payment.error', compact('order_id'));
         }
     }

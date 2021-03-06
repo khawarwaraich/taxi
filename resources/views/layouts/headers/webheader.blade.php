@@ -8,11 +8,22 @@
                         <p>Call Us Now at (88) 4586 2589</p>
                     </div>
                 </div>
+                @php
+                $name = "logo.jpg";
+                $path = BASE_URL.LARGE_IMAGE_PATH_OUTLET.$name;
+                $check_exist = File::exists(public_path().LARGE_IMAGE_PATH_OUTLET.$name);
+                if($check_exist == 1 && $name != '')
+                {
+                  $image = $path;
+                }else{
+                  $image = NO_IMAGE;
+                }
+                @endphp
                 <div class="col-sm-3">
                     <div class="logo-wraper">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="{{ asset('front') }}/images/logo.png" alt="">
+                                <img src="{{ $image }}" style="height: 68px;width: 208px;" alt="">
                             </a>
                         </div>
                     </div>

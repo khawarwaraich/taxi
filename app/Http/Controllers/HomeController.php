@@ -36,17 +36,16 @@ class HomeController extends Controller
 
     public function auth(Request $request)
     {
-
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+        if (Auth::guard('web')->attempt(['email' => $request->email, 'password' => $request->pass])) {
            return redirect()->intended('/');
         }else{
-            return view('login')->with('error', 'Invalid Credentials!');
+            return redirect()->intended('login')->with('error', 'Invalid Credentials!');
         }
     }
 
     public function logout(){
         Auth::guard('web')->logout();
-        return view('home');
+        return redirect()->intended('/');
     }
 
     public function registerUser(Request $request){
