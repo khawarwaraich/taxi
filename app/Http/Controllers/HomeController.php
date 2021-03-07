@@ -64,9 +64,9 @@ class HomeController extends Controller
         ]);
 
         if (!empty($reg->id)) {
-            return view('home');
+            return redirect()->intended('login')->with('success', 'Congrats account has been registered!');
         }else{
-            return view('register')->with('error', 'Invalid Credentials!');
+            return view('register')->with('error', 'Something went wrong!');
         }
 
     }

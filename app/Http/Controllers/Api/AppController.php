@@ -11,7 +11,7 @@ class AppController extends Controller
     public function getData()
     {
 
-        $categories = Catagories::select('name', 'description', 'charges', 'charges_type', 'image')
+        $categories = Catagories::select('id','name', 'description', 'charges', 'charges_type', 'image')
             ->where('status', 1)
             ->orderBy('id', 'desc')
             ->get();

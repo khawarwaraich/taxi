@@ -20,37 +20,43 @@ class RideController extends Controller
         $to_location = $request->to_location;
         $from_location = $this->getAdressAttr($from_location);
         $to_location = $this->getAdressAttr($to_location);
-        $from =array();
-        $from['address'] = $from_location->results[0]->formatted_address;
-        $from['lat'] = $from_location->results[0]->geometry->location->lat;
-        $from['lng'] = $from_location->results[0]->geometry->location->lng;
-        $to =array();
-        $to['address'] = $to_location->results[0]->formatted_address;
-        $to['lat'] = $to_location->results[0]->geometry->location->lat;
-        $to['lng'] = $to_location->results[0]->geometry->location->lng;
-        $distanceMatrix = $this->getDistanceMatrix($from['lat'],$from['lng'],$to['lat'],$to['lng']);
-        $data['distance'] = $distanceMatrix['distance'];
-        $data['duration'] = $distanceMatrix['duration'];
-        $distance_value = number_format($distanceMatrix['distance_value'], 2);
-        $categories = Catagories::all();
-        if(isset($categories) && !empty($categories))
+        if(isset($from_location->results[0]) && !empty($from_location->results[0]) && isset($to_location->results[0]) && !empty($to_location->results[0]))
         {
-            foreach($categories as $key => $value)
+            $from =array();
+            $from['address'] = $from_location->results[0]->formatted_address;
+            $from['lat'] = $from_location->results[0]->geometry->location->lat;
+            $from['lng'] = $from_location->results[0]->geometry->location->lng;
+            $to =array();
+            $to['address'] = $to_location->results[0]->formatted_address;
+            $to['lat'] = $to_location->results[0]->geometry->location->lat;
+            $to['lng'] = $to_location->results[0]->geometry->location->lng;
+            $distanceMatrix = $this->getDistanceMatrix($from['lat'],$from['lng'],$to['lat'],$to['lng']);
+            $data['distance'] = $distanceMatrix['distance'];
+            $data['duration'] = $distanceMatrix['duration'];
+            $distance_value = number_format($distanceMatrix['distance_value'], 2);
+            $categories = Catagories::all();
+            if(isset($categories) && !empty($categories))
             {
-                $charges_type = $value->charges_type;
-                $charges = $value->charges;
-                if($charges_type == "distance")
+                foreach($categories as $key => $value)
                 {
-                    $categories[$key]['amount'] = $charges * $distance_value;
-                }else{
-                    $categories[$key]['amount'] = $charges;
+                    $charges_type = $value->charges_type;
+                    $charges = $value->charges;
+                    if($charges_type == "distance")
+                    {
+                        $categories[$key]['amount'] = $charges * $distance_value;
+                    }else{
+                        $categories[$key]['amount'] = $charges;
+                    }
                 }
             }
+            $data['from_location'] = $from;
+            $data['to_location'] = $to;
+            $data['categories'] = $categories;
+            return view('ride_details', $data);
+        }else{
+            return redirect('/');
         }
-        $data['from_location'] = $from;
-        $data['to_location'] = $to;
-        $data['categories'] = $categories;
-        return view('ride_details', $data);
+
     }
 
     public function getAdressAttr($address){

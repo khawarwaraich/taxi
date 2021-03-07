@@ -40,7 +40,7 @@
                         <div class="form-group">
                             <label for="inputcountry1" class="col-sm-4 control-label2 control-label" >Pickup Date<span>*</span></label>
                             <div class=" col-sm-8 completing-form">
-                                <input type="datetime-local" class="form-control" name="pickup_time" placeholder="Select pickup date and time" required/>
+                                <input type="datetime-local" class="form-control" value="2021-03-01T12:00" name="pickup_time" placeholder="Select pickup date and time" required/>
                             </div>
                         </div>
                         <div class="form-group">

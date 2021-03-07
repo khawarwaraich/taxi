@@ -32,6 +32,13 @@
                                 </div>
                             </div>
                             @endif
+                            @if($message = Session::get('success'))
+                            <div class="col-lg-12">
+                              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                  {{$message}}
+                                </div>
+                            </div>
+                            @endif
                             <div class="wrap-input100 validate-input m-b-16" data-validate="Please enter username">
                                 <input class="input100" type="email" name="email" placeholder="Email address" required>
                                 <span class="focus-input100"></span>

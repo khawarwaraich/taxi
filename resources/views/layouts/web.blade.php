@@ -29,8 +29,7 @@
     height: 65% !important;
             }
             .bg-taxi{
-               background: #F1C40F;
-               height: 200px;
+               height: auto;
             }
         </style>
     </head>

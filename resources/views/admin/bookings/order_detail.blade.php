@@ -16,7 +16,7 @@
                             <h3 class="mb-0">#{{$booking->id}} - {{$booking->created_at}}</h3>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="https://foodtiger.site/orders" class="btn btn-sm btn-primary">Back</a>
+                            <a href="{{ route('admin:bookings')}}" class="btn btn-sm btn-primary">Back</a>
                         </div>
                     </div>
                 </div>
