@@ -65,9 +65,8 @@ class BookingController extends Controller
 
             $book = Booking::create($data);
             if (isset($book->id) && $book->id > 0) {
-                $currency = "USD";
-                $form = $this->stripe_checkout($book->id, $data['order_total'], $data['full_name'], $currency);
-                return view('payment.form', $form);
+                $url = BASE_URL.'/stripe-checkout/'.$data['full_name'].'/'.$book->id.'/'. $data['order_total'];
+                return redirect($url);
             }
         }
     }
@@ -106,9 +105,7 @@ class BookingController extends Controller
             $data['payment_status'] = 0;
             $book = Booking::create($data);
             if (isset($book->id) && $book->id > 0) {
-                $currency = "USD";
-                $form = $this->stripe_checkout($book->id, $data['order_total'], $data['full_name'], $currency);
-                return view('payment.form', $form);
+                return response()->json(['status' => true, 'id' => $book->id, 'amount' => $data['order_total'], 'name' => $data['full_name']], 200);
             }
         }
     }
@@ -119,9 +116,12 @@ class BookingController extends Controller
      * @param  \App\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    function stripe_checkout($id, $amount, $name, $currency)
+    function stripe_checkout(Request $request)
     {
-        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        $id = $request->id;
+        $amount= $request->amount;
+        $name = $request->name;
+        Stripe\Stripe::setApiKey('sk_test_qEfwJQ0N3JbFMBepdcv4Libs00mf3GpKYG');
 
         try {
             $session = \Stripe\Checkout\Session::create([
@@ -129,22 +129,22 @@ class BookingController extends Controller
                 'line_items' => [
                     [
                         'name' => $name,
-                        'currency' => $currency,
+                        'currency' => "USD",
                         'amount' =>  $amount * 100,
                         'quantity' => 1,
                     ],
                 ],
                 'mode' => 'payment',
                 'success_url' => 'https://thequickestdeliveryservice.com/payment-success?order_id=' . $id,
-                'cancel_url' => 'https://thequickestdeliveryservice.com/payment-cancel?order_id=' . $id,
+                'cancel_url' => 'https://thequickestdeliveryservice.com/payment-error?order_id=' . $id,
             ]);
         } catch (Exception $e) {
             echo $e->getMessage();
             exit;
         }
         $data['session_id'] = $session->id;
-        $data['stripe_publish_key'] = env('STRIPE_KEY');
-        return $data;
+        $data['stripe_publish_key'] = 'pk_test_0D5LVcQH8brCqqfXO5CXQdlK00T4XHtCV0';
+        return view('payment.form', $data);
     }
 
     /**

@@ -65,6 +65,7 @@ Route::group(['prefix' => 'admin','middleware' => ['admin.auth'],'as' => 'admin:
 
 ///Front Routes
 Route::get('/', ['as' => '/','uses' => 'HomeController@front']);
+Route::get('/about', ['as' => 'about','uses' => 'HomeController@about']);
 Route::get('/login', ['as' => 'login','uses' => 'HomeController@front_login']);
 Route::get('/register', ['as' => 'register.customer','uses' => 'HomeController@register']);
 Route::post('/front/login', ['as' => 'login.web','uses' => 'HomeController@auth']);
@@ -76,4 +77,5 @@ Route::any('/request-drive', ['as' => 'request-drive','uses' => 'RideController@
 Route::group(['middleware' => ['auth:web']], function () {
 Route::get('/checkout', ['as' => 'checkout','uses' => 'BookingController@checkout']);
 Route::post('/book-ride', ['as' => 'book-ride','uses' => 'BookingController@bookRide']);
+Route::get('/stripe-checkout/{name}/{id}/{amount}', ['as' => 'stripe-checkout','uses' => 'BookingController@stripe_checkout']);
 });

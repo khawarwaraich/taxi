@@ -9,28 +9,17 @@
                                 <div class="menu-header"><p>About Us</p></div>
                                 <div class="menu-item">
                                     <ul>
-                                        <li><a href="page26.html">About</a></li>
-                                        <li><a href="page27.html">Services</a></li>
+                                        <li><a href="{{route('about')}}">About</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="menu-col2">
-                                <div class="menu-header"><p>Melbourne</p></div>
+                                <div class="menu-header"><p>United States</p></div>
                                 <div class="menu-item">
                                     <ul>
-                                        <li><a href="">97-99 Isabella St</a></li>
-                                        <li><a href="">London SE1 8DD</a></li>
-                                        <li><a href="">United Kingdom</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="menu-col2 responsive-frame642">
-                                <div class="menu-header"><p>Sydney</p></div>
-                                <div class="menu-item">
-                                    <ul>
-                                        <li><a href="">14 Gambia St</a></li>
-                                        <li><a href="">Waterloo</a></li>
-                                        <li><a href="">London SE1 0XH, UK</a></li>
+                                        <li><a href="">11115 Tea Leaf Drive</a></li>
+                                        <li><a href="">Tomball, TX 77375</a></li>
+                                        <li><a href="">United States</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -64,7 +53,7 @@
                     </a>
                 </div>
                 <div class="copy-right">
-                    <p><span>The Quickest Delivery</span> &copy; Copyright {{ now()->year }} | All Rights Resrved | Developed By <a href="http://khawarr.com/" target="_blank">Khawar Hussain</a></p>
+                    <p><span>The Quickest Delivery</span></p>
                 </div>
             </div>
         </div>

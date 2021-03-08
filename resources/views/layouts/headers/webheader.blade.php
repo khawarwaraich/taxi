@@ -22,7 +22,7 @@
                 <div class="col-sm-3">
                     <div class="logo-wraper">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="{{route('/')}}">
                                 <img src="{{ $image }}" style="height: 68px;width: 208px;" alt="">
                             </a>
                         </div>

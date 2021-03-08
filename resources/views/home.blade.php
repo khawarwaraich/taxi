@@ -6,7 +6,7 @@
         <div class="main">
             <ul id="cbp-bislideshow" class="cbp-bislideshow">
                 <li>
-                    <div class="slider-img-wrap"><img src="{{ asset('front') }}/images/cover.jpg"/></div>
+                    <div class="slider-img-wrap"><img class="img-fluid" src="{{ asset('front') }}/images/cover.jpg"/></div>
                 </li>
             </ul>
         </div>

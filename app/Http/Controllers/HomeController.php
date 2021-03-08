@@ -24,6 +24,12 @@ class HomeController extends Controller
         return view('home');
     }
 
+    public function about()
+    {
+        return view('about_us');
+    }
+
+
     public function front_login()
     {
         return view('login');
