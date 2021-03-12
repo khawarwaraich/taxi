@@ -66,6 +66,8 @@ Route::group(['prefix' => 'admin','middleware' => ['admin.auth'],'as' => 'admin:
 ///Front Routes
 Route::get('/', ['as' => '/','uses' => 'HomeController@front']);
 Route::get('/about', ['as' => 'about','uses' => 'HomeController@about']);
+Route::any('/password/reset', ['as' => 'password.update','uses' => 'Auth\ResetPasswordController@reset']);
+Route::any('/password/reset/{token}', ['as' => 'password.reset','uses' => 'Auth\ResetPasswordController@showResetForm']);
 Route::get('/login', ['as' => 'login','uses' => 'HomeController@front_login']);
 Route::get('/register', ['as' => 'register.customer','uses' => 'HomeController@register']);
 Route::post('/front/login', ['as' => 'login.web','uses' => 'HomeController@auth']);
