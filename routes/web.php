@@ -58,6 +58,7 @@ Route::group(['prefix' => 'admin','middleware' => ['admin.auth'],'as' => 'admin:
 
     //Bookings
     Route::get('bookings', ['as' => 'bookings', 'uses' => 'BookingController@index']);
+    Route::post('booking/status', ['as' => 'booking.status', 'uses' => 'BookingController@change_status']);
     Route::get('order/detail/{id}', ['as' => 'booking.detail', 'uses' => 'BookingController@orderDetail']);
 
 
@@ -66,6 +67,7 @@ Route::group(['prefix' => 'admin','middleware' => ['admin.auth'],'as' => 'admin:
 ///Front Routes
 Route::get('/', ['as' => '/','uses' => 'HomeController@front']);
 Route::get('/about', ['as' => 'about','uses' => 'HomeController@about']);
+Route::get('/privacy-policy', ['as' => 'privacy-policy','uses' => 'HomeController@privacyPage']);
 Route::any('/password/reset', ['as' => 'password.update','uses' => 'Auth\ResetPasswordController@reset']);
 Route::any('/password/reset/{token}', ['as' => 'password.reset','uses' => 'Auth\ResetPasswordController@showResetForm']);
 Route::get('/login', ['as' => 'login','uses' => 'HomeController@front_login']);
@@ -76,8 +78,8 @@ Route::get('/payment-success', ['as' => 'payment-success','uses' => 'BookingCont
 Route::get('/payment-error', ['as' => 'payment-error','uses' => 'BookingController@payment_error']);
 Route::post('/front/register', ['as' => 'register.user','uses' => 'HomeController@registerUser']);
 Route::any('/request-drive', ['as' => 'request-drive','uses' => 'RideController@requestDrive']);
+Route::get('/stripe-checkout/{name}/{id}/{amount}', ['as' => 'stripe-checkout','uses' => 'BookingController@stripe_checkout']);
 Route::group(['middleware' => ['auth:web']], function () {
 Route::get('/checkout', ['as' => 'checkout','uses' => 'BookingController@checkout']);
 Route::post('/book-ride', ['as' => 'book-ride','uses' => 'BookingController@bookRide']);
-Route::get('/stripe-checkout/{name}/{id}/{amount}', ['as' => 'stripe-checkout','uses' => 'BookingController@stripe_checkout']);
 });

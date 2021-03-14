@@ -29,6 +29,7 @@
                       <th>Category</th>
                       <th>Customer Name</th>
                       <th>Total Amount</th>
+                      <th>Order Status</th>
                       <th>Payment Status</th>
                       <th>Actions</th>
                     </tr>
@@ -44,6 +45,26 @@
                       <td>{{$value->category->name}}</td>
                       <td>{{$value->full_name}}</td>
                       <td>${{$value->order_total}}</td>
+                      <td>
+                        <span class="badge badge-dot mr-4 current_status">
+                        @if($value->order_status == 'received')
+                        <i class="bg-warning"></i>
+                        <span class="status badge badge-warning badge-pill">Received</span>
+                        @elseif($value->order_status == 'accepted')
+                        <i class="bg-info"></i>
+                        <span class="status badge badge-info badge-pill">Accepted</span>
+                        @elseif($value->order_status == 'assigned')
+                        <i class="bg-warning"></i>
+                        <span class="status badge badge-warning badge-pill">Assigned</span>
+                        @elseif($value->order_status == 'delivered')
+                        <i class="bg-success"></i>
+                        <span class="status badge badge-success badge-pill">Delivered</span>
+                        @elseif($value->order_status == 'rejected')
+                        <i class="bg-danger"></i>
+                        <span class="status badge badge-danger badge-pill">Rejected</span>
+                        @endif
+                      </span>
+                    </td>
                       <td>
                         <span class="badge badge-dot mr-4 current_status">
                         @if($value->payment_status == 1)

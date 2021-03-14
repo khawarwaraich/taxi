@@ -140,6 +140,7 @@ return [
          * Laravel Framework Service Providers...
          */
         Illuminate\Auth\AuthServiceProvider::class,
+        Berkayk\OneSignal\OneSignalServiceProvider::class,
         GoogleMaps\ServiceProvider\GoogleMapsServiceProvider::class,
         SwooleTW\Http\LaravelServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
@@ -197,6 +198,7 @@ return [
     'aliases' => [
 
         'App' => Illuminate\Support\Facades\App::class,
+        'OneSignal' => Berkayk\OneSignal\OneSignalFacade::class,
         'Arr' => Illuminate\Support\Arr::class,
         'GoogleMaps' => GoogleMaps\Facade\GoogleMapsFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,

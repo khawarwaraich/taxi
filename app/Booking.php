@@ -9,7 +9,7 @@ class Booking extends Model
 {
     protected $fillable = [
         'customer_id', 'category_id', 'from_location', 'to_location','full_name', 'email', 'phone','pickup_time', 'transaction_no', 'note', 'order_total',
-        'payment_status'
+        'payment_status', 'order_status'
 
     ];
 
@@ -18,3 +18,4 @@ class Booking extends Model
         return $this->belongsTo(Catagories::class);
     }
 }
+

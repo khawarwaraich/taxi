@@ -9,6 +9,7 @@
                                 <div class="menu-header"><p>About Us</p></div>
                                 <div class="menu-item">
                                     <ul>
+                                        <li><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
                                         <li><a href="{{route('about')}}">About</a></li>
                                     </ul>
                                 </div>

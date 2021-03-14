@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Booking;
+use App\User;
 use App\Catagories;
 use Exception;
 use Validator;
 use Stripe;
+use OneSignal;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -18,7 +20,7 @@ class BookingController extends Controller
      */
     public function index(Request $request)
     {
-        $data['bookings'] = Booking::latest('id')
+        $data['bookings'] = Booking::orderBy('id', 'DESC')
             ->with('category')
             ->get();
         return view('admin.bookings.booking_order', $data);
@@ -160,6 +162,12 @@ class BookingController extends Controller
             $order = Booking::find($order_id);
             $order->payment_status = 1;
             $order->save();
+            $customer = User::find($order->customer_id);
+            if($customer->device_token != null)
+            {
+                $notification_message = "Your Order# ".$order->id." is placed successfully. You will receive confirmation shortly.";
+                $notify = $this->send_notification($customer->device_token, $notification_message);
+            }
             return view('payment.success', compact('order_id'));
         }
     }
@@ -168,6 +176,13 @@ class BookingController extends Controller
     {
         $order_id = $request->order_id;
         if (isset($order_id) && $order_id > 0) {
+            $order = Booking::find($order_id);
+            $customer = User::find($order->customer_id);
+            if($customer->device_token != null)
+            {
+                $notification_message = "Your Order# ".$order->id." is rejected due to payment processing issue.";
+                $notify = $this->send_notification($customer->device_token, $notification_message);
+            }
             return view('payment.error', compact('order_id'));
         }
     }
@@ -179,9 +194,31 @@ class BookingController extends Controller
      * @param  \App\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Booking $booking)
+    public function change_status(Request $request)
     {
-        //
+        $order_id = $request->order_id;
+        $status = $request->status;
+        $order = Booking::find($order_id);
+        if($order->first())
+        {
+            $order->order_status = $status;
+            $order->save();
+            $customer = User::find($order->customer_id);
+            if($customer->device_token != null)
+            {
+                if($status == "accepted")
+                {
+                    $notification_message = "Your Order# ".$order->id." is accepted shortly your order will be dispatched.";
+                }elseif($status == "rejected")
+                {
+                    $notification_message = "Your Order# ".$order->id." is rejected. Check your order details fo more information.";
+                }
+                $notify = $this->send_notification($customer->device_token, $notification_message);
+            }
+            return response()->json(['status' => true, 'message' => "Order Status updated"], 200);
+        }else{
+            return response()->json(['status' => false, 'message' => "Order not found"], 200);
+        }
     }
 
     /**
@@ -190,8 +227,21 @@ class BookingController extends Controller
      * @param  \App\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Booking $booking)
+    public function send_notification($device_token, $notification_message)
     {
-        //
+        try{
+           $notify =  OneSignal::sendNotificationToUser(
+                $notification_message,
+                $device_token,
+                $url = null,
+                $data = null,
+                $buttons = null,
+                $schedule = null
+            );
+            return $notify;
+        }catch (Exception $e)
+        {
+            echo $e->getMessage();
+        }
     }
 }

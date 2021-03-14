@@ -65,7 +65,8 @@ $('#datatable-buttons').dataTable( {
       "previous": "<",
       "next": ">"
     }
-  }
+  },
+  "order": []
 });
 </script>
 <script>

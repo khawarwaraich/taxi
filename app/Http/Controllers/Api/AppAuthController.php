@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 use Validator;
+use Password;
 
 class AppAuthController extends Controller
 {
@@ -62,5 +63,36 @@ class AppAuthController extends Controller
                 'message' => $message],
                 401);
         }
+    }
+    public function sendResetLinkEmail(Request $request){
+        $this->validate($request, [
+        'email'    => 'required',
+    ]);
+
+    $user =  User::where('email', $request->email)->first();
+    if( $user )
+    {
+        $credentials = ['email' => $user->email];
+        $response = Password::sendResetLink($credentials, function (Message $message) {
+            $message->subject($this->getEmailSubject());
+        });
+
+        switch ($response) {
+            case Password::RESET_LINK_SENT:
+                return response()->json([
+                    'status'        => true,
+                    'message' => 'Password reset link send into mail.',
+                    'data' =>''], 201);
+            case Password::INVALID_USER:
+                return response()->json([
+                    'status'        => false,
+                    'message' =>   'Unable to send password reset link.'
+                ], 401);
+        }  
+    }
+    return response()->json([
+        'status'        => false,
+        'message' =>   'User detail not found!'
+    ], 401);
     }
 }

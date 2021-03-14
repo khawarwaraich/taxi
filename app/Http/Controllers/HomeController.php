@@ -40,6 +40,10 @@ class HomeController extends Controller
         return view('register');
     }
 
+    public function privacyPage(){
+        return view('privacy-page');
+    }
+
     public function auth(Request $request)
     {
         if (Auth::guard('web')->attempt(['email' => $request->email, 'password' => $request->pass])) {

@@ -34,5 +34,4 @@ if (!app()->runningInConsole()) {
     define("NO_IMAGE", 'https://www.carsfrombanks.com/frontend/assets/images/placeholder/inventory-full-placeholder.png');
 } else {
     $server_name = gethostname();
-    define("BASE_URL", $server_name);
 }

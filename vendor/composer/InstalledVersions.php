@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '6953d14a1167fc2ae8f7dbf79092747352608899',
+    'reference' => 'a85e5d2745b9e03264709e3afa0ace2b67b187a4',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -60,6 +60,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'b9c31def6a83f84b4d4a40d35996d375755f0e08',
+    ),
+    'berkayk/onesignal-laravel' => 
+    array (
+      'pretty_version' => 'v1.0.6',
+      'version' => '1.0.6.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '4d9fd6c3d3b7a544bf648596bf460abbf17b7202',
     ),
     'box/spout' => 
     array (
@@ -562,7 +571,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '6953d14a1167fc2ae8f7dbf79092747352608899',
+      'reference' => 'a85e5d2745b9e03264709e3afa0ace2b67b187a4',
     ),
     'laravel/passport' => 
     array (

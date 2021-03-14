@@ -16,8 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('login', 'Api\AppAuthController@login');
 Route::post('register', 'Api\AppAuthController@register');
-Route::post('forgot-password', 'Auth\ForgotPasswordController@sendResetLinkEmail');
-Route::get('get-orders', 'Api\AppController@getOrders');
+Route::post('reset-password', 'Api\AppAuthController@sendResetLinkEmail');
+Route::post('get-orders', 'Api\AppController@getOrders');
+Route::post('save-token', 'Api\AppController@saveToken');
+
 
 Route::middleware('auth:api')->group(function () {
     Route::get('get-data', 'Api\AppController@getData');
