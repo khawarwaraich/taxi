@@ -18,9 +18,18 @@
 		<link href="{{ asset('front/css/component.css') }}" rel="stylesheet">
 		<link href="{{ asset('front/css/slide-component.css') }}" rel="stylesheet">
 		<link href="{{ asset('front/css/default.css') }}" rel="stylesheet">
-		<!-- font awesome this template -->
+        	<!-- font awesome this template -->
 		<link href="{{ asset('front/fonts/css/font-awesome.css') }}" rel="stylesheet">
 		<link href="{{ asset('front/fonts/css/font-awesome.min.css') }}" rel="stylesheet">
+
+        <link rel="stylesheet" href="{{ asset('front_v2/assets/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('front_v2/assets/css/all.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('front_v2/assets/css/fontawesome.css') }}">
+        <link rel="stylesheet" href="{{ asset('front_v2/assets/css/default.css') }}">
+        <link rel="stylesheet" href="{{ asset('front_v2/assets/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('front_v2/assets/css/responsive.css') }}">
+
+
 
 
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDg8qgq-reRY6-xQKfdOSS8JJgmDSLF2pU"></script>
@@ -40,11 +49,11 @@
 			</div>
 		</div>
 
-            @include('layouts.headers.webheader')
+            @include('layouts.headers.header')
 
             @yield('content')
 
-            @include('layouts.footers.webfooter')
+            @include('layouts.footers.footer')
 
             {{-- <script src="{{ asset('front/js/jquery.js') }}"></script> --}}
             <script src="{{ asset('front/js/menu/jquery.min.js') }}"></script>
@@ -63,6 +72,7 @@
             <script src="{{ asset('front/js/custom2.js') }}" type="text/javascript"></script>
             <script src="{{ asset('front/js/menu/custom-menu.js') }}"></script>
             <script src="{{ asset('front/scripts/google-scripts.js') }}"></script>
+            <script src="{{ asset('front_v2/assets/js/main.js') }}"></script>
 
             <script defer>
                 $(".book-now").on("click", function(){

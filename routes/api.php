@@ -19,6 +19,7 @@ Route::post('register', 'Api\AppAuthController@register');
 Route::post('reset-password', 'Api\AppAuthController@sendResetLinkEmail');
 Route::post('get-orders', 'Api\AppController@getOrders');
 Route::post('save-token', 'Api\AppController@saveToken');
+Route::post('profile-update', 'Api\AppAuthController@profileUpdate');
 
 
 Route::middleware('auth:api')->group(function () {

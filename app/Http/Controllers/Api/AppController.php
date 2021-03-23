@@ -47,7 +47,7 @@ class AppController extends Controller
             return response()->json(['status' => false, 'error' => 'Data not found'], 401);
         }
     }
-    
+
     public function saveToken(Request $request)
     {
          $validator = Validator::make(
@@ -62,7 +62,7 @@ class AppController extends Controller
         }
         $user_id = $request->user_id;
         $device_token = $request->device_token;
-        
+
         $user = User::find($user_id);
         if ($user->id > 0) {
             $user->device_token = $device_token;
@@ -72,6 +72,6 @@ class AppController extends Controller
             return response()->json(['status' => false, 'error' => 'User not found'], 401);
         }
     }
-    
-    
+
+
 }

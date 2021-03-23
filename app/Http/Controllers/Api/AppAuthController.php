@@ -38,6 +38,35 @@ class AppAuthController extends Controller
         return response()->json(['status' => $status, 'message' => $message, 'token' => $token], 200);
     }
 
+    public function profileUpdate(Request $request)
+    {
+        $status = false;
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'image' => 'required|image',
+                'user_id' => 'required',
+            ]
+        );
+        if ($validator->fails()) {
+            return response()->json(['status' => $status, 'errors' => $validator->errors()]);
+        }
+        $user = User::find($request->user_id);
+        if(isset($user) && !empty($user->id))
+        {
+            if($request->hasFile('image')){
+            $imageName = time().'.'.request()->image->getClientOriginalExtension();
+            request()->image->move(public_path('/images'), $imageName);
+            $user->image = $imageName;
+            }
+            $user->save();
+            return response()->json(['status' => true, 'message' => "Profile image updated"], 200);
+        }else{
+            return response()->json(['status' => false, 'message' => "User not exists"], 200);
+        }
+
+    }
+
     public function login(Request $request)
     {
         $status = false;
@@ -51,11 +80,19 @@ class AppAuthController extends Controller
             $token = auth()->user()->createToken('QuickestDelivery')->accessToken;
             $status = true;
             $message = "Login Successfull";
+            $user = User::find(auth()->user()->id);
+            {
+                 if(isset($user->image)){
+                    $user->image = url('/public/images', $user->image);
+                    }else{
+                    $user->image = '';
+                    }
+            }
             return response()->json([
                 'status' => $status,
                 'message' => $message,
                 'token' => $token,
-                'user' => auth()->user()],
+                'user' => $user],
                 200);
         } else {
             return response()->json([
@@ -88,7 +125,7 @@ class AppAuthController extends Controller
                     'status'        => false,
                     'message' =>   'Unable to send password reset link.'
                 ], 401);
-        }  
+        }
     }
     return response()->json([
         'status'        => false,
