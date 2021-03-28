@@ -48,6 +48,7 @@ return array(
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Ride' => $baseDir . '/app/Ride.php',
+    'App\\Riders' => $baseDir . '/app/Riders.php',
     'App\\Rules\\CurrentPasswordCheckRule' => $baseDir . '/app/Rules/CurrentPasswordCheckRule.php',
     'App\\Settings' => $baseDir . '/app/Settings.php',
     'App\\User' => $baseDir . '/app/User.php',

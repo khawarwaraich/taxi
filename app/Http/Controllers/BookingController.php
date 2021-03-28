@@ -137,8 +137,8 @@ class BookingController extends Controller
                     ],
                 ],
                 'mode' => 'payment',
-                'success_url' => 'https://thequickestdeliveryservice.com/payment-success?order_id=' . $id,
-                'cancel_url' => 'https://thequickestdeliveryservice.com/payment-error?order_id=' . $id,
+                'success_url' => BASE_URL.'/payment-success?order_id=' . $id,
+                'cancel_url' => BASE_URL.'/payment-error?order_id=' . $id,
             ]);
         } catch (Exception $e) {
             echo $e->getMessage();
@@ -163,7 +163,7 @@ class BookingController extends Controller
             $order->payment_status = 1;
             $order->save();
             $customer = User::find($order->customer_id);
-            if($customer->device_token != null)
+            if(isset($customer->device_token) && !empty($customer->device_token))
             {
                 $notification_message = "Your Order# ".$order->id." is placed successfully. You will receive confirmation shortly.";
                 $notify = $this->send_notification($customer->device_token, $notification_message);
@@ -178,7 +178,7 @@ class BookingController extends Controller
         if (isset($order_id) && $order_id > 0) {
             $order = Booking::find($order_id);
             $customer = User::find($order->customer_id);
-            if($customer->device_token != null)
+            if(isset($customer->device_token) && !empty($customer->device_token))
             {
                 $notification_message = "Your Order# ".$order->id." is rejected due to payment processing issue.";
                 $notify = $this->send_notification($customer->device_token, $notification_message);

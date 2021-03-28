@@ -63,19 +63,6 @@
                     </form>
                 </div>
             </div>
-            <div class="col-sm-4 page30-form-wrapper">
-                <div class="row">
-                    <div class="add-wrap">
-                        <div class="add-img"><a href=""><img class="img-responsive" src="{{ asset('front') }}/images/add1.jpg" alt=""/></a></div>
-                        <div class="add-text"><a href=""><h2>Budget <br/>Car Rentals<br/> Intercity<br/> Taxi Hire</h2></a></div>
-                    </div>
-                    <div class="add-wrap">
-                        <div class="add-img add-img2"><a href=""><img class="img-responsive" src="{{ asset('front') }}/images/add2.jpg" alt=""/></a></div>
-                        <div class="add-text"><a href=""><h2>I Wish I Could <br/> Drive A Different <br/> Car Everyday</h2></a></div>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
 </div>

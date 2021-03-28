@@ -55,7 +55,7 @@ $end = $to_location['lat'].','.$to_location['lng'];
                       $image = NO_IMAGE;
                     }
                     @endphp
-					<div class="page25-content">
+					<div class="page25-content mt-5">
 						<div class="page25-content-header"></div>
 						<div class="col-sm-2">
 							<div class="row">
@@ -76,7 +76,7 @@ $end = $to_location['lat'].','.$to_location['lng'];
 						</div>
 						<div class="col-sm-2">
 							<div class="row">
-								<div class="pa28-text-wrap">
+								<div class="pa28-text-wrap" style="margin-top: 38px;">
 									<h2>${{$value->amount ?? 0.00}}</h2>
 									<p>Fare</p>
 								</div>

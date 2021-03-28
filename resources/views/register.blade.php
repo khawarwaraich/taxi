@@ -10,16 +10,8 @@
 </head>
 <body>
     <div class="main-bg">
-        <div class="box-conatiner">
-            <div id="a">
-                <div class="circle-ripple"></div>
-            </div>
             <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <h1 class="heading-left">Welcome! Please Register to proceed</h1>
-                </div>
-                <div class="col-sm-6 col-md-6">
-                    <div class="wrap-login100">
+                    <div class="col-md-6 col-sm-6 col-xs-6 wrap-login100">
                         <span class="login100-form-title">
                             Register
                         </span>
@@ -50,7 +42,7 @@
                                     Register
                                 </button>
                             </div>
-                            <div class="flex-col-c p-t-110 p-b-40">
+                            <div class="flex-col-c p-b-40 mt-3">
                                 <a href="{{ route('login') }}" class="txt3">
                                     Already have account?
                                 </a>
@@ -58,8 +50,6 @@
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
     </div>
 </body>
 </html>

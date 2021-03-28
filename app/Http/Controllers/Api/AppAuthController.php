@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use App\Riders;
 use Validator;
 use Password;
 
@@ -17,16 +18,55 @@ class AppAuthController extends Controller
         $validator = Validator::make(
             $request->all(),
             [
-                'email' => 'email|unique:users',
+                'email' => 'email',
             ]
         );
         if ($validator->fails()) {
-            return response()->json(['status' => $status, 'message' => "Email address already taken"]);
+            return response()->json(['status' => $status, 'message' => $validator->errors()]);
+        }
+        $user_found = User::where('email', $request->email)->first();
+        if (isset($user_found->id) && $user_found->id > 0) {
+            return response()->json(['status' => $status, 'message' => "Email already exists"]);
         }
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => bcrypt($request->password)
+            'password' => bcrypt($request->password),
+        ]);
+
+        $token = $user->createToken('QuickestDelivery')->accessToken;
+        if(isset($token) && !empty($token))
+        {
+            $status = true;
+            $message = "Contgratulations you account has been registered.";
+        }
+
+
+        return response()->json(['status' => $status, 'message' => $message, 'token' => $token], 200);
+    }
+
+    public function Riderregister(Request $request)
+    {
+        $status = false;
+        $message = "Error occurred check errors parameter to verify your data";
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'name' => 'required',
+                'email' => 'email|unique:riders',
+            ]
+        );
+        if ($validator->fails()) {
+            return response()->json(['status' => $status, 'message' => $validator->errors()]);
+        }
+        $user_found = Riders::where('email', $request->email)->first();
+        if (isset($user_found->id) && $user_found->id > 0) {
+            return response()->json(['status' => $status, 'message' => "Email already exists"]);
+        }
+        $user = Riders::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => bcrypt($request->password),
         ]);
 
         $token = $user->createToken('QuickestDelivery')->accessToken;
@@ -73,7 +113,7 @@ class AppAuthController extends Controller
         $message = "Unauthorized User";
         $credentials = [
             'email' => $request->email,
-            'password' => $request->password
+            'password' => $request->password,
         ];
 
         if (auth()->attempt($credentials)) {
@@ -101,6 +141,41 @@ class AppAuthController extends Controller
                 401);
         }
     }
+
+    public function riderlogin(Request $request)
+    {
+        $status = false;
+        $message = "Unauthorized User";
+        $credentials = [
+            'email' => $request->email,
+            'password' => $request->password,
+        ];
+        if (auth()->guard('riders')->attempt($credentials)) {
+            $token = auth()->guard('riders')->user()->createToken('QuickestDelivery')->accessToken;
+            $status = true;
+            $message = "Login Successfull";
+            $user = Riders::find(auth()->guard('riders')->user()->id);
+            {
+                 if(isset($user->image)){
+                    $user->image = url('/public/images', $user->image);
+                    }else{
+                    $user->image = '';
+                    }
+            }
+            return response()->json([
+                'status' => $status,
+                'message' => $message,
+                'token' => $token,
+                'user' => $user],
+                200);
+        } else {
+            return response()->json([
+                'status' => $status,
+                'message' => $message],
+                401);
+        }
+    }
+
     public function sendResetLinkEmail(Request $request){
         $this->validate($request, [
         'email'    => 'required',

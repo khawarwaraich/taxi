@@ -10,16 +10,8 @@
 </head>
 <body>
     <div class="main-bg">
-        <div class="box-conatiner">
-            <div id="a">
-                <div class="circle-ripple"></div>
-            </div>
             <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <h1 class="heading-left">For Continue Please Login</h1>
-                </div>
-                <div class="col-sm-6 col-md-6">
-                    <div class="wrap-login100">
+                    <div class="col-md-6 col-sm-6 col-xs-6 wrap-login100">
                         <span class="login100-form-title">
                             Sign In
                         </span>
@@ -51,7 +43,7 @@
                                 <span class="txt1">
                                     Forgot
                                 </span>
-                                <a href="#" class="txt2">
+                                <a href="{{route('password.request')}}" class="txt2">
                                     Username / Password?
                                 </a>
                             </div>
@@ -67,9 +59,7 @@
                             </div>
                         </form>
                     </div>
-                </div>
             </div>
-        </div>
     </div>
 </body>
 </html>

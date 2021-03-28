@@ -68,7 +68,7 @@ class RideController extends Controller
     }
 
     public function getDistanceMatrix($from_lat,$from_lng,$to_lat,$to_lng){
-        $responce = file_get_contents('https://maps.googleapis.com/maps/api/distancematrix/json?&origins=' . $from_lat . ',' . $from_lng . '&destinations=' . $to_lat . ',' . $to_lng . '&key=AIzaSyDg8qgq-reRY6-xQKfdOSS8JJgmDSLF2pU');
+        $responce = file_get_contents('https://maps.googleapis.com/maps/api/distancematrix/json?&origins=' . $from_lat . ',' . $from_lng . '&destinations=' . $to_lat . ',' . $to_lng . '&key=AIzaSyDonC-1G2p3mTe58eYXqSO3-4MIx5Zj3pM');
         $responce = json_decode($responce);
         $outer_status = $responce->status;
         if (isset($outer_status) && $outer_status == "OK"){

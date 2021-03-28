@@ -19,9 +19,19 @@
             <div class="header_area">
                 <div class="container">
                     <div class="meader_wrapper d-flex justify-content-between align-items-center">
-
+                        @php
+                        $name = "logo.jpg";
+                        $path = BASE_URL.LARGE_IMAGE_PATH_OUTLET.$name;
+                        $check_exist = File::exists(public_path().LARGE_IMAGE_PATH_OUTLET.$name);
+                        if($check_exist == 1 && $name != '')
+                        {
+                          $image = $path;
+                        }else{
+                          $image = NO_IMAGE;
+                        }
+                        @endphp
                         <div class="logo_area">
-                            <a href=""><img src="assets/img/logo.svg" alt=""></a>
+                            <a href=""><img src="{{$image}}" height="44px;" alt=""></a>
                         </div>
 
                         <div class="header_right d-flex align-items-center">
@@ -33,9 +43,16 @@
                                 </ul>
                             </div>
                             <div class="mobo_menu d-lg-none"><span class="bar"><i class="fal fa-bars"></i></span></div>
+                            @guest
                             <div class="header_right_btn">
                                 <a href="{{route('login')}}" class="btn">LOGIN</a>
                             </div>
+                            @endguest
+                            @if(auth()->guard('web')->check())
+                            <div class="header_right_btn">
+                                <a href="{{route('logout')}}" class="btn">LOGOUT</a>
+                            </div>
+                            @endif
                         </div>
 
                     </div>

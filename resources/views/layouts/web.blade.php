@@ -32,7 +32,7 @@
 
 
 
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDg8qgq-reRY6-xQKfdOSS8JJgmDSLF2pU"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&amp;key=AIzaSyDonC-1G2p3mTe58eYXqSO3-4MIx5Zj3pM"></script>
         <style>
             #map-canvas {
     height: 65% !important;

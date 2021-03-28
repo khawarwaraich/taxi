@@ -64,6 +64,11 @@ class HomeController extends Controller
         $email = $request->email;
         $password = $request->pass;
 
+        $user_found = User::where('email', $email)->first();
+        if (isset($user_found->id) && $user_found->id > 0) {
+            return redirect()->intended('register')->with('error', 'Email already exists!');
+        }
+
         $reg = User::create([
             'name' => $name,
             'email' => $email,

@@ -42,7 +42,11 @@
                         <i class="ni ni-shop text-orange"></i> {{ __('Categories') }}
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin:riders')}}">
+                        <i class="ni ni-circle-08 text-orange"></i> {{ __('Riders') }}
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admin:users')}}">
                         <i class="ni ni-circle-08 text-orange"></i> {{ __('Customers') }}

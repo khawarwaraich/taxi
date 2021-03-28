@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('login', 'Api\AppAuthController@login');
 Route::post('register', 'Api\AppAuthController@register');
+Route::post('rider-register', 'Api\AppAuthController@Riderregister');
+Route::post('rider-login', 'Api\AppAuthController@riderlogin');
 Route::post('reset-password', 'Api\AppAuthController@sendResetLinkEmail');
 Route::post('get-orders', 'Api\AppController@getOrders');
 Route::post('save-token', 'Api\AppController@saveToken');
